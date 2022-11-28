@@ -6,14 +6,16 @@ import {ReactComponent as BurgerIcon} from '../assets/img/burger-icon.svg'
 
 const Navbar = () => {
   return (
-    <nav className='bg-gradient-to-r from-main-teal to-secondary-teal grid grid-cols-3 rounded-full p-5 inset-x-0 mx-auto fixed bottom-28 w-5/6 place-items-center'>
-           <a href="#" className='bg-main-dark flex justify-center items-center rounded-full w-20 h-20'>
+    <nav className='bg-gradient-to-r from-main-teal to-secondary-teal grid grid-cols-5 rounded-full inset-x-0 mx-auto fixed bottom-28 w-5/6 place-items-center px-5'>
+           <a href="#" className='bg-main-dark flex justify-center items-center rounded-full w-20 h-20 justify-self-end'>
                 <HomeIcon className=' w-24 h-24 p-2'/>
            </a> 
+           <div className=' p-2 h-24 bg-main-dark skew-x-12'></div>
            <a href="#" className='bg-main-dark flex justify-center items-center rounded-full w-20 h-20'>
                 <ContactIcon className=' w-24 h-24 p-2'/>
-           </a> 
-           <a href="#" className='bg-main-dark flex justify-center items-center rounded-full w-20 h-20'>
+           </a>
+           <div className=' p-2 bg-main-dark h-24 skew-x-12'></div> 
+           <a href="#" className='bg-main-dark flex justify-center items-center rounded-full w-20 h-20 justify-self-start'>
                 <BurgerIcon className=' w-24 h-24 p-2'/>
            </a> 
     </nav>

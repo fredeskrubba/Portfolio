@@ -1,13 +1,12 @@
-import './styles/output.css';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App bg-main-dark font-lato">
+    <div className="App bg-main-dark">
       <Navbar/>
       <Header/>
-      <div className='p-96'></div>
+      <div></div>
     </div>
   );
 }

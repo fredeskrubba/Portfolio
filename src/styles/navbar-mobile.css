@@ -1,3 +1,61 @@
+
 nav{
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background: rgb(57,181,203);
+    background: linear-gradient(126deg, rgba(57,181,203,1) 56%, rgba(52,227,206,1) 78%);
+    border-radius: 100px;
+    width: 80vw;
+    position: fixed;
+    bottom: 10vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+}   
+
+.home-button{
+    background-color: #363636;
+    fill: #39B5CB;
+    justify-self: flex-end;
 }
+
+.contact-button{
+    background-color: #363636;
+    fill: #39B5CB;
+    justify-self: center;
+}
+
+.burger-button{
+    background-color: #363636;
+    stroke: #34E3CE;
+    justify-self: flex-start;
+}
+
+.home-button:hover, .contact-button:hover{
+    background-color: #34E3CE;
+    fill: #363636;
+}
+
+.burger-button:hover{
+    background-color: #39B5CB;
+    stroke: #363636;
+    cursor: pointer;
+}
+.nav-button{
+    padding: 1vw;
+    border-radius: 100%;
+    width: 7vw;
+    height: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5vw;
+}
+
+.nav-divider{
+    background-color: #363636;
+    width: 10px;
+    transform: skew(30deg);
+    justify-self: center;
+}
+

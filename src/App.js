@@ -1,13 +1,17 @@
-import Header from './components/Header';
-import Navbar from './components/Navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import './styles/style.css'
+
 
 function App() {
   return (
-    <div className="App bg-main-dark">
-      <Navbar/>
-      <Header/>
-      <div></div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/Contact' element={<Contact/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

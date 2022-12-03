@@ -2,7 +2,9 @@
 
 .header{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .header h1{
@@ -10,4 +12,20 @@
     color: #39b5cb;
     font-size: 7.7vw;
     margin: 8vw 4vw;
+}
+
+.banner{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.banner-item{
+    color: #363636;
+    background-color: #39b5cb;
+    padding: 2vw 3vw;
+    font-size: 3vw;
+    font-weight: 700;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
 }

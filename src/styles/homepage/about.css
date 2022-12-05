@@ -23,12 +23,12 @@
     right: 0;
     left: 0;
     margin: auto;
-    top: 140vw;
+    top: 150vw;
 }
 
 .about-img-container img{
-    height: 40vw;
-    width: 40vw;
+    height: 50vw;
+    width: 50vw;
     border-radius: 100%;
     border: #363636 solid 4px;
     display: block;

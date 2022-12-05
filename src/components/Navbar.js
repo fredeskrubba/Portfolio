@@ -16,7 +16,11 @@ const Navbar = () => {
                 <ContactIcon className='contact-icon'/>
            </Link>
            <div className='nav-divider '></div>           
-          <BurgerIcon className='burger-button nav-button'/>
+          <BurgerIcon className='burger-button nav-button' onClick={
+            ()=>{
+              alert('Burger Function')
+            }
+          }/>
            
     </nav>
   )

@@ -15,17 +15,43 @@
 }
 
 .banner{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    overflow: hidden;
 }
 
+.banner-wrapper{
+    width: 100%;
+    padding-left: 100%;
+    background-color: transparent;
+}
+
+@keyframes ticker {
+    0% {
+    transform: translate3d(0, 0, 0);
+    }
+    100% {
+    transform: translate3d(-100%, 0, 0);
+    }
+    }
+.banner-transition{
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 25s;
+}
+
+.banner-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
 .banner-item{
-    color: #363636;
     background-color: #39b5cb;
-    padding: 2vw 3vw;
-    font-size: 3vw;
-    font-weight: 700;
+    padding: 2vw;
     border-radius: 100px;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    font-size: 4vw;
 }

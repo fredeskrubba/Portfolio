@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/header.css'
+import '../../styles/homepage/header.css'
 import Banner from './header-banner/Banner'
 
 const Header = () => {

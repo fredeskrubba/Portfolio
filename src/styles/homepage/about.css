@@ -1,0 +1,53 @@
+.about-section{
+    margin: 15vw 0;
+    background-color: #34e3ce;
+    padding: 8vw;
+}
+
+.quote-section {
+    color: #34e3ce;
+    font-style: italic;
+    background-color: #363636;
+    padding: 5vw;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 25vw;
+}
+
+.about-img-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 150vw;
+}
+
+.about-img-container img{
+    height: 50vw;
+    width: 50vw;
+    border-radius: 100%;
+    border: #363636 solid 4px;
+    display: block;
+}
+.about-img-container div {
+    background-color: #39b5cb;
+    padding: 0 5vw;
+    font-size: 4vw;
+    font-weight: 700;
+    width: 40%;
+    border: 3px solid #363636;
+    transform: skew(-20deg);
+    position: relative;
+    bottom: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+}
+.about-img-container div p {
+    transform: skew(20deg);
+}

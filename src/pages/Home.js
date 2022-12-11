@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Header from '../components/header/Header'
 import About from '../components/About'
 import profile from '../assets/img/profile.jpg'
+import ProjectsSection from '../components/projects/ProjectsSection'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Navbar/>
       <Header/>
       <About img={profile}/>
+      <ProjectsSection/>
     </>
   )
 }

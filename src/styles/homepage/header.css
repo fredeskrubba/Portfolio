@@ -22,20 +22,3 @@
     position: relative;
     bottom: 4vw;
 }
-
-.lower-header{
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
-    margin: 5vw;
-    transform: skew(-5deg);
-}
-
-.lower-header img{
-    width: 30vw;
-}
-
-.seperator-2{
-    padding: 2vw;
-    background-color: #39b5cb;
-    height: 100%;
-}

@@ -5,20 +5,69 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 8vw 4vw;
 }
 
 .header h1{
     font-family: 'Play', sans-serif;
     color: #39b5cb;
     font-size: 9vw;
-    margin: 8vw 4vw;
 }
 
 .seperator-1{
     padding: 0.7vw;
     background-color: #39b5cb;
-    margin: 0 5vw;
     transform: skew(-50deg);
     position: relative;
     bottom: 4vw;
+}
+
+.lower-header{
+    background-color: #34E3CE;
+    width: 100%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 6vw;
+    color: #363636;
+}
+
+.headings{
+    margin: 4vw;
+}
+
+.circle{
+    background-color: #363636;
+    border-radius: 100%;
+}
+
+.circle-med{
+    width: 20vw;
+    height: 20vw;
+}
+
+.circle-small{
+    width: 10vw;
+    height: 10vw;
+    align-self: flex-end;
+}
+
+.circle-big{
+    width: 30vw;
+    height: 30vw;
+}
+
+.bubble-cont-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+}
+
+.bubble-cont-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    position: relative;
+    right: 8vw;
+    top: 6vw;
 }

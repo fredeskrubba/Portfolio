@@ -60,3 +60,44 @@ nav{
     justify-self: center;
 }
 
+.burger-menu{
+    display: none;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: #363636aa;
+}
+
+.link-menu{
+    position: relative;
+    border-top: 5px solid #363636;
+    top: 107vw;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #39B5CB;
+    gap: 7vw;
+    margin: 2vw;
+    padding: 5vw 0 0 0;
+    border-radius:  0px 0px 20px 20px;
+    height: 95vw;
+}
+
+.link-menu a{
+    color: #363636;
+    text-decoration: none;
+    font-size: 10vw;
+    border-bottom: 3px solid #363636;
+    text-align: center;
+    margin: 0 2vw;
+    font-weight: bold;
+}
+
+.link-menu a:hover{
+    color: #34E3CE;
+    border-color: #34E3CE;
+}

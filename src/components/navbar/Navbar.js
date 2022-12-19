@@ -1,11 +1,12 @@
 import React from 'react'
-import {ReactComponent as HomeIcon} from '../assets/img/home-icon.svg'
-import {ReactComponent as ContactIcon} from '../assets/img/contact-icon.svg'
-import {ReactComponent as BurgerIcon} from '../assets/img/burger-icon.svg'
-import '../styles/navbar-mobile.css'
+import {ReactComponent as HomeIcon} from '../../assets/img/home-icon.svg'
+import {ReactComponent as ContactIcon} from '../../assets/img/contact-icon.svg'
+import {ReactComponent as BurgerIcon} from '../../assets/img/burger-icon.svg'
+import '../../styles/navbar-mobile.css'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+
+const Navbar = ({visible, setVisible}) => {
   return (
     <nav>
            <Link to='/' className='home-button nav-button'>
@@ -18,10 +19,9 @@ const Navbar = () => {
            <div className='nav-divider '></div>           
           <BurgerIcon className='burger-button nav-button' onClick={
             ()=>{
-              alert('Burger Function')
+              visible === 'none' ? setVisible('flex') : setVisible('none') 
             }
           }/>
-           
     </nav>
   )
 }

@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 8vw 4vw;
+    margin: 4vw 4vw;
 }
 
 .header h1{
@@ -30,6 +30,7 @@
     grid-template-columns: 1fr 1fr;
     font-size: 6vw;
     color: #363636;
+    margin-top: 4vw;
 }
 
 .headings{

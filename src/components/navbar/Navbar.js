@@ -6,7 +6,8 @@ import '../../styles/navbar-mobile.css'
 import { Link } from 'react-router-dom'
 
 
-const Navbar = ({visible, setVisible}) => {
+const Navbar = ({visible, setVisible, burgerClass, setBurgerClass}) => {
+  
   return (
     <nav>
            <Link to='/' className='home-button nav-button'>
@@ -17,9 +18,11 @@ const Navbar = ({visible, setVisible}) => {
                 <ContactIcon className='contact-icon'/>
            </Link>
            <div className='nav-divider '></div>           
-          <BurgerIcon className='burger-button nav-button' onClick={
+          <BurgerIcon className='nav-button burger-button' onClick={
+            
             ()=>{
-              visible === 'none' ? setVisible('flex') : setVisible('none') 
+              visible === 'none' ? setVisible('flex') : setVisible('none')
+              burgerClass === 'link-menu' ? setBurgerClass('link-menu-visible') : setBurgerClass('link-menu-visible')
             }
           }/>
     </nav>

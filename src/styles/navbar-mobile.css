@@ -75,17 +75,38 @@ nav{
 .link-menu{
     background-color: #39B5CB;
     width: 50%;
-    position: fixed;
-    right: 0;
+    position: absolute;
     height: 100%;
     display: flex;
     flex-direction: column;
+    transition: all ease-in 200ms;
 }
+
+.link-menu-visible{
+    background-color: #39B5CB;
+    width: 50%;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    transition: 200ms ease-in;
+}
+
 
 .link-menu a{
     color: #363636;
     text-decoration: none;
-    font-size: 10vw;
+    font-size: 6vw;
+    border-bottom: 3px solid #363636;
+    text-align: center;
+    font-weight: bold;
+    padding: 3vw;
+}
+.link-menu-visible a{
+    color: #363636;
+    text-decoration: none;
+    font-size: 6vw;
     border-bottom: 3px solid #363636;
     text-align: center;
     font-weight: bold;
@@ -93,7 +114,13 @@ nav{
 }
 
 .link-menu a:hover{
-    color: #34E3CE;
+    color: #39B5CB;
+    border-color: #363636;
+    background-color: #363636;
+    
+}
+.link-menu-visible a:hover{
+    color: #39B5CB;
     border-color: #363636;
     background-color: #363636;
     

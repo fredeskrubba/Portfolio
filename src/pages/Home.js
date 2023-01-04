@@ -9,14 +9,15 @@ import { useState } from 'react'
 
 const Home = () => {
   const [visible, setVisible] = useState('none')
-  
+  const [burgerClass, setBurgerClass] = useState('burger-button nav-button')
+
   return (
     <>
-      <Navbar setVisible={setVisible} visible={visible}/>
+      <Navbar setVisible={setVisible} visible={visible} burgerClass={burgerClass} setBurgerClass={setBurgerClass}/>
       <Header/>
       <About img={profile}/>
       <ProjectsSection/>
-      <BurgerMenu visible={visible}/>
+      <BurgerMenu visible={visible} burgerClass={burgerClass}/>
     </>
   )
 }

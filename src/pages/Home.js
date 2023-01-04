@@ -8,8 +8,8 @@ import BurgerMenu from '../components/navbar/BurgerMenu'
 import { useState } from 'react'
 
 const Home = () => {
-  const [visible, setVisible] = useState('none')
-  const [burgerClass, setBurgerClass] = useState('burger-button nav-button')
+  const [visible, setVisible] = useState('burger-menu')
+  const [burgerClass, setBurgerClass] = useState('link-menu')
 
   return (
     <>

@@ -61,7 +61,7 @@ nav{
 }
 
 .burger-menu{
-    display: none;
+    display: block;
     position: fixed;
     justify-content: center;
     top: 0;
@@ -69,28 +69,45 @@ nav{
     left: 0;
     right: 0;
     height: 100%;
-    background-color: #363636aa;
+    background-color: #36363600;
+    transition: 300ms ease-in-out;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.burger-menu-visible{
+    display: block;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: #363636c8;
+    transition: 300ms ease-in-out;
 }
 
 .link-menu{
-    background-color: #39B5CB;
+    background-color: #39B5CB;      
     width: 50%;
-    position: absolute;
+    position: fixed;
     height: 100%;
     display: flex;
+    right: -60vw;
     flex-direction: column;
-    transition: all ease-in 200ms;
+    transition: all ease-in-out 500ms;
 }
 
 .link-menu-visible{
     background-color: #39B5CB;
     width: 50%;
-    position: absolute;
+    position: fixed;
     height: 100%;
     display: flex;
     flex-direction: column;
     right: 0;
-    transition: 200ms ease-in;
+    transition: all 500ms ease-in;
 }
 
 

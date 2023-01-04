@@ -21,8 +21,8 @@ const Navbar = ({visible, setVisible, burgerClass, setBurgerClass}) => {
           <BurgerIcon className='nav-button burger-button' onClick={
             
             ()=>{
-              visible === 'none' ? setVisible('flex') : setVisible('none')
-              burgerClass === 'link-menu' ? setBurgerClass('link-menu-visible') : setBurgerClass('link-menu-visible')
+              burgerClass === 'link-menu' ? setBurgerClass('link-menu-visible') : setBurgerClass('link-menu')
+              visible === 'burger-menu' ? setVisible('burger-menu-visible') : setVisible('burger-menu')
             }
           }/>
     </nav>

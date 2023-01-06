@@ -1,5 +1,7 @@
 
-nav{
+ 
+
+.navbar-mobile{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     background: rgb(57,181,203);
@@ -12,8 +14,7 @@ nav{
     right: 0;
     margin: auto;
     z-index: 1;
-}   
-
+}
 .home-button{
     background-color: #363636;
     fill: #39B5CB;
@@ -142,3 +143,4 @@ nav{
     background-color: #363636;
     
 }
+

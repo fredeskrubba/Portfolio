@@ -1,0 +1,49 @@
+@media screen and (min-width: 992px) {
+    .navbar-mobile{
+        display: none;
+    }
+
+    nav{
+        margin-bottom: 3vw;
+    }
+  }
+
+  
+.navbar-desktop{
+    display: flex;
+    padding: 2vw;
+    border-bottom: 5px solid #39B5CB;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #363636;
+    z-index: 1;
+    margin-bottom: 10vw;
+}
+
+.navbar-desktop article{
+    margin-left: auto;
+    margin-right: 6vw;
+    display: flex;
+    gap: 2vw;
+}
+
+a{
+    color: #39B5CB;
+    text-decoration: none;
+    font-size: 3vw;
+}
+
+a:hover{
+    color: #34E3CE;
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-desktop{
+        display: none;
+    }
+
+    nav{
+        margin-bottom: 3vw;
+    }
+  }

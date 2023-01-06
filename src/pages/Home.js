@@ -6,18 +6,25 @@ import profile from '../assets/img/profile.jpg'
 import ProjectsSection from '../components/projects/ProjectsSection'
 import BurgerMenu from '../components/navbar/BurgerMenu'
 import { useState } from 'react'
+import create from 'zustand'
+
+
+const useToggleBurger = create((set) => ({
+  burgerClass: 'burger-menu',
+
+}))
+
 
 const Home = () => {
-  const [visible, setVisible] = useState('burger-menu')
-  const [burgerClass, setBurgerClass] = useState('link-menu')
+  
 
   return (
     <>
-      <Navbar setVisible={setVisible} visible={visible} burgerClass={burgerClass} setBurgerClass={setBurgerClass}/>
+      <Navbar />
       <Header/>
       <About img={profile}/>
       <ProjectsSection/>
-      <BurgerMenu visible={visible} burgerClass={burgerClass}/>
+      <BurgerMenu/>
     </>
   )
 }

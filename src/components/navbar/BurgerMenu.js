@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useBurgerStore } from './burgerStore/useBurgerStore'
 
 
-const BurgerMenu = ({ visible, burgerClass}) => {
+const BurgerMenu = () => {
+  const {visible, burgerClass} = useBurgerStore()
   return (
-    <section className={visible}>
+     <section className={visible}>
         <article className={burgerClass}>
-            <Link to='om'>Om Mig</Link>
-            <Link to='projekter'>Mine Projekter</Link>
-            <Link to='cases'>Mine Cases</Link>
+            <Link to='About'>Om Mig</Link>
+            <Link to='Projects'>Mine Projekter</Link>
+            <Link to='Cases'>Mine Cases</Link>
         </article>
     </section>
   )

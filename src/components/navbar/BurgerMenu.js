@@ -8,9 +8,9 @@ const BurgerMenu = () => {
   return (
      <section className={visible}>
         <article className={burgerClass}>
-            <Link to='About'>Om Mig</Link>
-            <Link to='Projects'>Mine Projekter</Link>
-            <Link to='Cases'>Mine Cases</Link>
+            <Link to='/About'>Om Mig</Link>
+            <Link to='/Projects'>Mine Projekter</Link>
+            <Link to='/Contact'>Kontakt Mig</Link>
         </article>
     </section>
   )

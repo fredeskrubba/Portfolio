@@ -45,6 +45,8 @@
 .circle-med{
     width: 20vw;
     height: 20vw;
+    background-image: url("../../assets/img/pc_2.jpg");
+    background-size: cover;
 }
 
 .circle-small{
@@ -56,6 +58,8 @@
 .circle-big{
     width: 30vw;
     height: 30vw;
+    background-image: url("../../assets/img/pc_1.jpg");
+    background-size: cover;
 }
 
 .bubble-cont-1{

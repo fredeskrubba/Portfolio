@@ -1,9 +1,9 @@
 import React from 'react'
 import Project from './Project'
-import '../../styles/homepage/projects-section.css'
-import projects from '../../assets/img/projects.jpg'
-import cases from '../../assets/img/cases.jpg'
-import experience from '../../assets/img/experience.jpg'
+import '../../../styles/homepage/projects-section.css'
+import projects from '../../../assets/img/projects.jpg'
+import cases from '../../../assets/img/cases.jpg'
+import experience from '../../../assets/img/experience.jpg'
 
 
 const ProjectsSection = () => {

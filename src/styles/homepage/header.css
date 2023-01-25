@@ -76,3 +76,23 @@
     right: 8vw;
     top: 6vw;
 }
+
+@media screen and (min-width: 992px) {
+    .header h1{
+        font-size: 7vw;
+    }
+
+    
+    .lower-header{
+        display: block;
+    }
+
+    .lower-header figure{
+        display: none;
+    }
+    .headings {
+        display: flex;
+        font-size: 4vw;
+        justify-content: space-evenly;
+    }
+  }

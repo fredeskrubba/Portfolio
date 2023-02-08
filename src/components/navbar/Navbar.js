@@ -4,7 +4,7 @@ import {ReactComponent as ContactIcon} from '../../assets/img/contact-icon.svg'
 import {ReactComponent as BurgerIcon} from '../../assets/img/burger-icon.svg'
 import '../../styles/navbar-mobile.css'
 import '../../styles/navbar-desktop.css'
-import { Link } from 'react-router-dom'
+import { Link } from 'wouter'
 import { useBurgerStore } from './burgerStore/useBurgerStore'
 
 const Navbar = () => {
@@ -12,11 +12,11 @@ const Navbar = () => {
   return (
     <nav>
       <section className='navbar-mobile'>
-            <Link to='/' className='home-button nav-button'>
+            <Link href='/' className='home-button nav-button'>
                   <HomeIcon className='home-icon'/>
             </Link> 
             <div className='nav-divider'></div>
-            <Link to='/Contact' className='contact-button nav-button'>
+            <Link href='/contact' className='contact-button nav-button'>
                   <ContactIcon className='contact-icon'/>
             </Link>
             <div className='nav-divider '></div>           
@@ -29,11 +29,11 @@ const Navbar = () => {
             }/>
       </section>
       <section className='navbar-desktop'>
-            <Link to='/'>Hjem</Link>
+            <Link href='/'>Hjem</Link>
             <article>
-              <Link to='/About'>Om</Link>
-              <Link to='/Projects'>Projekter</Link>
-              <Link to='/Contact'>Kontakt</Link>
+              <Link href='/about'>Om</Link>
+              <Link href='/projects'>Projekter</Link>
+              <Link href='/contact'>Kontakt</Link>
             </article>
       </section>
     </nav>

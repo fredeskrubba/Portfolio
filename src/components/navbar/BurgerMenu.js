@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'wouter'
 import { useBurgerStore } from './burgerStore/useBurgerStore'
 
 
@@ -8,9 +8,9 @@ const BurgerMenu = () => {
   return (
      <section className={visible}>
         <article className={burgerClass}>
-            <Link to='/About'>Om Mig</Link>
-            <Link to='/Projects'>Mine Projekter</Link>
-            <Link to='/Contact'>Kontakt Mig</Link>
+            <Link href='/about'>Om Mig</Link>
+            <Link href='/projects'>Mine Projekter</Link>
+            <Link href='/contact'>Kontakt Mig</Link>
         </article>
     </section>
   )

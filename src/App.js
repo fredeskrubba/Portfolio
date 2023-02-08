@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import {  Route } from 'wouter'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
@@ -8,14 +8,15 @@ import './styles/style.css'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='Contact' element={<Contact/>}/>
-        <Route path='About' element={<About/>}/>
-        <Route path='Projects' element={<Projects/>}/>
-      </Routes>
-    </BrowserRouter>
+        <div>
+          <Route path='/' component={Home}/>
+          <Route path='/contact' element={Contact}/>
+          <Route path='/about' element={About}/>
+          <Route path='/projects' element={Projects}/>
+        </div>
+        
+      
+    
   );
 }
 

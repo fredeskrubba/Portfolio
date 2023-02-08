@@ -26,7 +26,6 @@
     background-color: #34E3CE;
     width: 100%;
     border-radius: 20px;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 6vw;
     color: #363636;
@@ -43,8 +42,6 @@
     margin: 4vw;
     font-size: 4vw;
     justify-content: space-evenly;
-    align-items: center;
-
 }
 .heading-div{
     display: flex;
@@ -96,11 +93,6 @@
 .dropdown-bubble {
     display: flex;
     flex-direction: column;
-    border-radius: 100%;
-    border: 5px solid #363636;
-    width: 15vw;
-    height: 15vw;
-    align-items: center;
 }
 
 .dropdown-bubble img {
@@ -108,11 +100,12 @@
     height: 15vw;
     border-radius: 100%;
     display: block;
+    border: 5px solid #363636;
 }
 
 .dropdown{
     width: 13vw;
-    height: 3vw;
+    height: 2vw;
     background-color: #39b5cb;
     border: 5px solid #363636;
     display: flex;
@@ -133,4 +126,19 @@
 
 figure{
     display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .lower-header{
+        display: grid;
+    }
+    .headings-desktop{
+        display: none;
+    }
+    .headings-mobile{
+        display: block;
+    }
+    figure{
+        display: block;
+    }
 }

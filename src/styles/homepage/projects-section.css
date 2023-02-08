@@ -17,7 +17,7 @@
 .project img{
     width: 60vw;
     height: 30vw;
-    border: solid 3px #39B5CB;
+    border: solid 5px #39B5CB;
     transform: skew(-15deg);
 
 }
@@ -27,6 +27,18 @@
     position: relative;
     bottom: 6vw;
     left: 10vw;
+}
+
+.link-button button:hover{
+    cursor: pointer;
+}
+
+.link-button button:hover ~ .project img{
+    transform: skew(15deg);
+}
+
+.link-button:hover ~ .navbar-desktop{
+    color: red;
 }
 .link-button button{
     border: none;

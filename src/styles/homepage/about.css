@@ -54,8 +54,7 @@
 }
 
 @media screen and (min-width: 992px) {
-    .about-img-container{
-        
-        top: 117vw;
+    .about-img-container{    
+        top: 135vw;
     }
   }

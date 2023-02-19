@@ -4,19 +4,29 @@ import {ReactComponent as ContactIcon} from '../../assets/img/contact-icon.svg'
 import {ReactComponent as BurgerIcon} from '../../assets/img/burger-icon.svg'
 import '../../styles/navbar-mobile.css'
 import '../../styles/navbar-desktop.css'
-import { Link } from 'react-router-dom'
-import { useBurgerStore } from './burgerStore/useBurgerStore'
+import { Link, useRoute } from 'wouter'
+import { useBurgerStore } from '../stores/useBurgerStore'
+
+// component for making links active depending on current page
+const ActiveLink = props => {
+  const [isActive] = useRoute(props.href);
+  return (
+    <Link {...props}>
+      <a className={isActive ? "active" : ""}>{props.children}</a>
+    </Link>
+  );
+};
 
 const Navbar = () => {
   const {visible, setVisible, burgerClass, setBurgerClass} = useBurgerStore()
   return (
     <nav>
       <section className='navbar-mobile'>
-            <Link to='/' className='home-button nav-button'>
+            <Link href='/' className='home-button nav-button'>
                   <HomeIcon className='home-icon'/>
             </Link> 
             <div className='nav-divider'></div>
-            <Link to='/Contact' className='contact-button nav-button'>
+            <Link href='/contact' className='contact-button nav-button'>
                   <ContactIcon className='contact-icon'/>
             </Link>
             <div className='nav-divider '></div>           
@@ -29,11 +39,11 @@ const Navbar = () => {
             }/>
       </section>
       <section className='navbar-desktop'>
-            <Link to='/'>Hjem</Link>
+            <ActiveLink href='/'>Hjem</ActiveLink>
             <article>
-              <Link to='/About'>Om</Link>
-              <Link to='/Projects'>Projekter</Link>
-              <Link to='/Contact'>Kontakt</Link>
+              <ActiveLink href='/about'>Om</ActiveLink>
+              <ActiveLink href='/projects'>Projekter</ActiveLink>
+              <ActiveLink href='/contact'>Kontakt</ActiveLink>
             </article>
       </section>
     </nav>

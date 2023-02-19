@@ -12,7 +12,6 @@
 .navbar-desktop{
     display: flex;
     padding: 2vw;
-    border-bottom: 5px solid #39B5CB;
     position: fixed;
     top: 0;
     width: 100%;
@@ -31,13 +30,16 @@
 a{
     color: #39B5CB;
     text-decoration: none;
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 a:hover{
     color: #34E3CE;
 }
 
+.active{
+    color: #34E3CE;
+}
 @media screen and (max-width: 992px) {
     .navbar-desktop{
         display: none;

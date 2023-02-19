@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/homepage/about.css'
-import {ReactComponent as ArrowIcon} from '../assets/img/arrow.svg'
+import '../../styles/homepage/about.css'
+import {ReactComponent as ArrowIcon} from '../../assets/img/arrow.svg'
 
 const About = ({img, alt}) => {
   return (

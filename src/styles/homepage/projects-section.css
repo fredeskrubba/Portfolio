@@ -1,5 +1,5 @@
 .projects-section{
-    margin-top: 60vw;
+    margin-top: 45vw;
     margin-bottom: 30vw;
     width: 100%;
     display: flex;
@@ -17,7 +17,7 @@
 .project img{
     width: 60vw;
     height: 30vw;
-    border: solid 3px #39B5CB;
+    border: solid 5px #39B5CB;
     transform: skew(-15deg);
 
 }
@@ -26,17 +26,30 @@
     background-color: #39B5CB;
     position: relative;
     bottom: 6vw;
-    left: 10vw;
-}
-.link-button button{
+    left: 16vw;
     border: none;
     padding: 3vw 8vw;
     background-color: #39B5CB;
     color: #363636;
     font-style: italic;
-    font-size: 5vw;
+    font-size: 3vw;
     font-weight: 700;
 }
+
+.link-button:hover{
+    cursor: pointer;
+}
+
+.link-button:hover ~ .project img{
+    transform: skew(15deg);
+}
+
+.link-button:hover ~ .navbar-desktop{
+    color: red;
+}
+
+
+
 
 @media screen and (min-width: 992px) {
     .projects-section{

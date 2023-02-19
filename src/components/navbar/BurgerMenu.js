@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'wouter'
-import { useBurgerStore } from './burgerStore/useBurgerStore'
+import { useBurgerStore } from '../stores/useBurgerStore'
 
 
 const BurgerMenu = () => {

@@ -5,7 +5,7 @@ import {ReactComponent as BurgerIcon} from '../../assets/img/burger-icon.svg'
 import '../../styles/navbar-mobile.css'
 import '../../styles/navbar-desktop.css'
 import { Link, useRoute } from 'wouter'
-import { useBurgerStore } from './burgerStore/useBurgerStore'
+import { useBurgerStore } from '../stores/useBurgerStore'
 
 // component for making links active depending on current page
 const ActiveLink = props => {

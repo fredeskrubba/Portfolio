@@ -26,29 +26,30 @@
     background-color: #39B5CB;
     position: relative;
     bottom: 6vw;
-    left: 10vw;
+    left: 16vw;
+    border: none;
+    padding: 3vw 8vw;
+    background-color: #39B5CB;
+    color: #363636;
+    font-style: italic;
+    font-size: 3vw;
+    font-weight: 700;
 }
 
-.link-button button:hover{
+.link-button:hover{
     cursor: pointer;
 }
 
-.link-button button:hover ~ .project img{
+.link-button:hover ~ .project img{
     transform: skew(15deg);
 }
 
 .link-button:hover ~ .navbar-desktop{
     color: red;
 }
-.link-button button{
-    border: none;
-    padding: 3vw 8vw;
-    background-color: #39B5CB;
-    color: #363636;
-    font-style: italic;
-    font-size: 5vw;
-    font-weight: 700;
-}
+
+
+
 
 @media screen and (min-width: 992px) {
     .projects-section{

@@ -5,7 +5,7 @@ const Project = ({img, buttonText, alt, url}) => {
   return (
     <article className='project'>
         <img src={img} alt={alt} />
-        <Link href={url} className='link-button'><button>{buttonText}</button></Link>
+        <Link href={url}><button className='link-button'>{buttonText}</button></Link>
     </article>
   )
 }

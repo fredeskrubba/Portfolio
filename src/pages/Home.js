@@ -16,11 +16,11 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
+      
       <Header/>
       <About img={profile}/>
       <ProjectsSection/>
-      <BurgerMenu/>
+      
     </>
   )
 }

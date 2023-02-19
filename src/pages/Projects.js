@@ -4,8 +4,7 @@ import BurgerMenu from '../components/navbar/BurgerMenu'
 export const Projects = () => {
   return (
     <>
-        <Navbar/>
-        <BurgerMenu/>
+        
     </>
   )
 }

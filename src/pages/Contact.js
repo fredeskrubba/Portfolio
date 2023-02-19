@@ -6,8 +6,7 @@ import BurgerMenu from '../components/navbar/BurgerMenu'
 const Contact = () => {
   return (
     <>
-      <Navbar/>
-      <BurgerMenu/>
+      
     </>
   )
 }

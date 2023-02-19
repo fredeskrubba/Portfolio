@@ -7,16 +7,16 @@ import backendImg from "../../../assets/img/pc_2.jpg"
 
 const Header = () => {
   return (
-    <header className='header'>
-      <section className='upper-header'>
+    <header className='header' >
+      <section className='upper-header' >
         <h1 className=''>Frederik Skrubbeltrang</h1>
-        <div className='seperator-1'></div>
+        <div className='seperator-1'/>
       </section>
       <section className='lower-header'>
         <article className='headings-desktop'>
           <div className='heading-div'>
             <h2>UI/UX</h2>
-            <DropdownBubble img={uiImg} alt="ui img"/>
+            <DropdownBubble img={uiImg} alt="ui img" />
           </div>
           <div className='heading-div'>
             <h2>Frontend</h2>

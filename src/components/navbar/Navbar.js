@@ -4,8 +4,18 @@ import {ReactComponent as ContactIcon} from '../../assets/img/contact-icon.svg'
 import {ReactComponent as BurgerIcon} from '../../assets/img/burger-icon.svg'
 import '../../styles/navbar-mobile.css'
 import '../../styles/navbar-desktop.css'
-import { Link } from 'wouter'
+import { Link, useRoute } from 'wouter'
 import { useBurgerStore } from './burgerStore/useBurgerStore'
+
+// component for making links active depending on current page
+const ActiveLink = props => {
+  const [isActive] = useRoute(props.href);
+  return (
+    <Link {...props}>
+      <a className={isActive ? "active" : ""}>{props.children}</a>
+    </Link>
+  );
+};
 
 const Navbar = () => {
   const {visible, setVisible, burgerClass, setBurgerClass} = useBurgerStore()
@@ -29,11 +39,11 @@ const Navbar = () => {
             }/>
       </section>
       <section className='navbar-desktop'>
-            <Link href='/'>Hjem</Link>
+            <ActiveLink href='/'>Hjem</ActiveLink>
             <article>
-              <Link href='/about'>Om</Link>
-              <Link href='/projects'>Projekter</Link>
-              <Link href='/contact'>Kontakt</Link>
+              <ActiveLink href='/about'>Om</ActiveLink>
+              <ActiveLink href='/projects'>Projekter</ActiveLink>
+              <ActiveLink href='/contact'>Kontakt</ActiveLink>
             </article>
       </section>
     </nav>

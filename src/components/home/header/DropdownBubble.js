@@ -12,10 +12,10 @@ const DropdownBubble = ({img, alt, dropDownText}) => {
         <img src={img} alt={alt} />
         <div className='dropdown' onClick={()=>{visible === "hide" ? setVisible("show") : setVisible("hide")}} >
             <ArrowDown />
-            <article className={`dropdown-text ${visible}`}>
-              <p>{dropDownText}</p>
-            </article>
         </div>
+        <article className={`dropdown-text ${visible}`}>
+          <p>{dropDownText}</p>
+        </article>
     </div>
   )
 }

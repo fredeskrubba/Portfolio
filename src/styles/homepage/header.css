@@ -115,6 +115,7 @@
     border-radius: 50px;
     position: relative;
     bottom: 4vw;
+    z-index: 1;
 }
 
 
@@ -130,15 +131,16 @@ figure{
 
 .dropdown-text{
     position: absolute;
-    top: 3.2vw;
+    top: 79vw;
+    width: 12vw;
     background-color: #39B5CB;
     color: #363636;
     font-size: 1.5vw;
     padding: 1.5vw;
     padding-top: 0;
     border: #363636 solid 5px;
-    z-index: -1;
     min-height: 17vw;
+    z-index: 0;
 }
 
 .hide{

@@ -12,7 +12,7 @@ function App() {
         <div>
           <Navbar/>
           <BurgerMenu/>
-
+          
 
           <Route path='/' component={Home}/>
           <Route path='/contact' element={Contact}/>

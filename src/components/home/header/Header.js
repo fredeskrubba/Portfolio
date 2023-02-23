@@ -4,8 +4,12 @@ import DropdownBubble from './DropdownBubble'
 import uiImg from "../../../assets/img/pc_3.jpg"
 import frontendImg from "../../../assets/img/pc_1.jpg"
 import backendImg from "../../../assets/img/pc_2.jpg"
+import { useState } from 'react'
 
 const Header = () => {
+  const [popText1, setPopText1] = useState("pop-text-1")
+  const [popText2, setPopText2] = useState("pop-text-2")
+  const [popText3, setPopText3] = useState("pop-text-3")
   return (
     <header className='header' >
       <section className='upper-header' >
@@ -16,15 +20,15 @@ const Header = () => {
         <article className='headings-desktop'>
           <div className='heading-div'>
             <h2>UI/UX</h2>
-            <DropdownBubble img={uiImg} alt="ui img" />
+            <DropdownBubble img={uiImg} alt="ui img" popText="lorem ipsum lorem ipsu  1234334" popTextClass={popText1} setPopTextClass={setPopText1}/>
           </div>
           <div className='heading-div'>
             <h2>Frontend</h2>
-            <DropdownBubble img={frontendImg} alt="frontend img"/>
+            <DropdownBubble img={frontendImg} alt="frontend img" popTextClass={popText2} setPopTextClass={setPopText2}/>
           </div>
           <div className='heading-div'>
             <h2>Backend</h2>
-            <DropdownBubble img={backendImg} alt={backendImg}/>
+            <DropdownBubble img={backendImg} alt={backendImg} popTextClass={popText3} setPopTextClass={setPopText3}/>
           </div>
         </article>
         <article className='headings-mobile'>

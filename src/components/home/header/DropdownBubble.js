@@ -1,20 +1,16 @@
 import React from 'react'
-import {ReactComponent as ArrowDown} from '../../../assets/img/arrow-down.svg'
 import '../../../styles/homepage/header.css'
-import { useDesktopStore } from '../../stores/homeStore'
+import { useState } from 'react'
 
-const DropdownBubble = ({img, alt, dropDownText}) => {
-  const visible = useDesktopStore((state) => state.dropdownTextVisible)
-  const setVisible = useDesktopStore((state) => state.setDropdownTextVisible)
+const DropdownBubble = ({img, alt, popText, popTextClass, setPopTextClass}) => {
 
   return (
     <div className='dropdown-bubble'>
-        <img src={img} alt={alt} />
-        <div className='dropdown' onClick={()=>{visible === "hide" ? setVisible("show") : setVisible("hide")}} >
-            <ArrowDown />
-        </div>
-        <article className={`dropdown-text ${visible}`}>
-          <p>{dropDownText}</p>
+        <img src={img} alt={alt}/>
+        <article className={`pop-text ${popTextClass}`}>
+          <p>
+            {popText}
+          </p>
         </article>
     </div>
   )

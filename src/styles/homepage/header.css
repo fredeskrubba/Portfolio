@@ -103,53 +103,45 @@
     display: block;
     border: 5px solid #363636;
 }
-
-.dropdown{
-    width: 13vw;
-    height: 2vw;
-    background-color: #39b5cb;
-    border: 5px solid #363636;
-    display: flex;
-    justify-content: center;
-    padding: 1vw;
-    border-radius: 50px;
-    position: relative;
-    bottom: 4vw;
-    z-index: 1;
+.dropdown-bubble img:hover {
+    cursor: pointer;
 }
 
 
+.pop-text{
+    position: absolute;
+    top: 72vw;
+    background-color: #363636;
+    color: #34E3CE;
+    border-top: 5px solid #39b5cb;
+    font-size: 1vw;
+    padding: 1vw;
+    width: 8vw;
+    min-height: 6vw;
+}
 
-
-.dropdown:hover{
-    cursor: pointer;
+.pop-text-1{
+    right: 68vw;
+    display: none;
+}
+.pop-text-2{
+    right: 43vw;
+    display: none;
+}
+.pop-text-3{
+    right: 14vw;
+    display: none;
+}
+.dropdown-bubble p{
+    margin: 0;
 }
 
 figure{
     display: none;
 }
 
-.dropdown-text{
-    position: absolute;
-    top: 79vw;
-    width: 12vw;
-    background-color: #39B5CB;
-    color: #363636;
-    font-size: 1.5vw;
-    padding: 1.5vw;
-    padding-top: 0;
-    border: #363636 solid 5px;
-    min-height: 17vw;
-    z-index: 0;
-}
 
-.hide{
-    display: none;
-}
 
-.show{
-    display: block;
-}
 @media screen and (max-width: 992px) {
     .lower-header{
         display: grid;

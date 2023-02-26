@@ -103,9 +103,7 @@
     display: block;
     border: 5px solid #363636;
 }
-.dropdown-bubble img:hover {
-    cursor: pointer;
-}
+
 
 
 .pop-text{
@@ -118,24 +116,29 @@
     padding: 1vw;
     width: 8vw;
     min-height: 6vw;
+    pointer-events: none;
 }
 
 .pop-text-1{
     right: 68vw;
-    display: none;
 }
 .pop-text-2{
     right: 43vw;
-    display: none;
 }
 .pop-text-3{
     right: 14vw;
-    display: none;
 }
 .dropdown-bubble p{
     margin: 0;
 }
 
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
 figure{
     display: none;
 }

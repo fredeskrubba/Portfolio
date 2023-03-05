@@ -3,10 +3,10 @@
 .header{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: 0 4vw  4vw 4vw;
     z-index: -3;
+    min-height: 55vw;
 }
 
 .header h1{
@@ -31,8 +31,13 @@
     font-size: 6vw;
     color: #363636;
     margin-top: 4vw;
+    opacity: 0;
 }
 
+.fade-in{
+        animation: fadeInAnimation ease 3s;
+        opacity: 1;
+}
 .headings-mobile{
     margin: 4vw;
     display: none;
@@ -104,41 +109,39 @@
     border: 5px solid #363636;
 }
 
-.dropdown{
-    width: 13vw;
-    height: 2vw;
-    background-color: #39b5cb;
-    border: 5px solid #363636;
-    display: flex;
-    justify-content: center;
-    padding: 1vw;
-    border-radius: 50px;
-    position: relative;
-    bottom: 4vw;
-}
 
 
-
-
-.dropdown:hover{
-    cursor: pointer;
-}
-
-figure{
-    display: none;
-}
-
-.dropdown-text{
+.pop-text{
     position: absolute;
-    top: 3.2vw;
-    background-color: #39B5CB;
-    color: #363636;
-    font-size: 1.5vw;
-    padding: 1.5vw;
-    padding-top: 0;
-    border: #363636 solid 5px;
-    z-index: -1;
-    min-height: 17vw;
+    top: 72vw;
+    background-color: #363636;
+    color: #34E3CE;
+    border-top: 5px solid #39b5cb;
+    font-size: 1vw;
+    padding: 1vw;
+    width: 15vw;
+    min-height: 10vw;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    pointer-events: none;
+    box-shadow: 1px 2px 9px 0px rgba(0,0,0,0.75);
+}
+
+.pop-text-1{
+    right: 62vw;
+    animation: infoAnimation1 400ms ease-in;
+}
+.pop-text-2{
+    right: 36vw;
+    animation: infoAnimation2 400ms ease-in;
+
+}
+.pop-text-3{
+    right: 7vw;
+    animation: infoAnimation3 400ms ease-in;
+}
+.dropdown-bubble p{
+    margin: 0;
 }
 
 .hide{
@@ -148,6 +151,12 @@ figure{
 .show{
     display: block;
 }
+figure{
+    display: none;
+}
+
+
+
 @media screen and (max-width: 992px) {
     .lower-header{
         display: grid;
@@ -161,4 +170,44 @@ figure{
     figure{
         display: block;
     }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes infoAnimation1 {
+  from {
+    opacity: 0;
+    right: 58vw;
+}
+  to {
+    opacity: 1;
+    right: 62;
+}
+}
+@keyframes infoAnimation2 {
+  from {
+    opacity: 0;
+    right: 32vw;
+}
+  to {
+    opacity: 1;
+    right: 36;
+}
+}
+@keyframes infoAnimation3 {
+  from {
+    opacity: 0;
+    right: 3vw;
+}
+  to {
+    opacity: 1;
+    right: 7;
+}
 }

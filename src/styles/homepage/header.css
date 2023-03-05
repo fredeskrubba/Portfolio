@@ -119,19 +119,26 @@
     border-top: 5px solid #39b5cb;
     font-size: 1vw;
     padding: 1vw;
-    width: 8vw;
-    min-height: 6vw;
+    width: 15vw;
+    min-height: 10vw;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     pointer-events: none;
+    box-shadow: 1px 2px 9px 0px rgba(0,0,0,0.75);
 }
 
 .pop-text-1{
-    right: 68vw;
+    right: 62vw;
+    animation: infoAnimation1 400ms ease-in;
 }
 .pop-text-2{
-    right: 43vw;
+    right: 36vw;
+    animation: infoAnimation2 400ms ease-in;
+
 }
 .pop-text-3{
-    right: 14vw;
+    right: 7vw;
+    animation: infoAnimation3 400ms ease-in;
 }
 .dropdown-bubble p{
     margin: 0;
@@ -172,4 +179,35 @@ figure{
     100% {
         opacity: 1;
      }
+}
+
+@keyframes infoAnimation1 {
+  from {
+    opacity: 0;
+    right: 58vw;
+}
+  to {
+    opacity: 1;
+    right: 62;
+}
+}
+@keyframes infoAnimation2 {
+  from {
+    opacity: 0;
+    right: 32vw;
+}
+  to {
+    opacity: 1;
+    right: 36;
+}
+}
+@keyframes infoAnimation3 {
+  from {
+    opacity: 0;
+    right: 3vw;
+}
+  to {
+    opacity: 1;
+    right: 7;
+}
 }

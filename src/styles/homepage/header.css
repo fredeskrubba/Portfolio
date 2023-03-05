@@ -3,10 +3,10 @@
 .header{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: 0 4vw  4vw 4vw;
     z-index: -3;
+    min-height: 55vw;
 }
 
 .header h1{
@@ -31,8 +31,13 @@
     font-size: 6vw;
     color: #363636;
     margin-top: 4vw;
+    opacity: 0;
 }
 
+.fade-in{
+        animation: fadeInAnimation ease 3s;
+        opacity: 1;
+}
 .headings-mobile{
     margin: 4vw;
     display: none;
@@ -158,4 +163,13 @@ figure{
     figure{
         display: block;
     }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }

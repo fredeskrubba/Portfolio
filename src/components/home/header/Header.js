@@ -4,16 +4,31 @@ import DropdownBubble from './DropdownBubble'
 import uiImg from "../../../assets/img/pc_3.jpg"
 import frontendImg from "../../../assets/img/pc_1.jpg"
 import backendImg from "../../../assets/img/pc_2.jpg"
+import { useState, useEffect } from 'react'
 
 const Header = () => {
- 
+  
+  const [fade, setFade] = useState("")
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    if (position >= 280){
+      setFade("fade-in")
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll,);
+  }, []);
+
+
   return (
     <header className='header' >
       <section className='upper-header' >
         <h1 className=''>Frederik Skrubbeltrang</h1>
         <div className='seperator-1'/>
       </section>
-      <section className='lower-header'>
+      <section className={`lower-header ${fade}`}>
         <article className='headings-desktop'>
           <div className='heading-div'>
             <h2>UI/UX</h2>

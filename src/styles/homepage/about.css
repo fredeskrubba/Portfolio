@@ -35,7 +35,7 @@
 }
 .about-img-container div {
     background-color: #39b5cb;
-    padding: 0 5vw;
+    padding: 3vw 5vw;
     font-size: 4vw;
     font-weight: 700;
     width: 40%;
@@ -48,13 +48,22 @@
     justify-content: center;
     gap: 1.5vw;
 }
+
+.about-img-container:hover{
+    cursor: pointer;
+}
 .about-img-container div p {
     transform: skew(20deg);
     color: #363636;
+    margin: 0;
+}
+.about-img-container div svg {
+    width: 3vw;
+    transform: skew(20deg);
 }
 
 @media screen and (min-width: 992px) {
     .about-img-container{    
-        top: 135vw;
+        top: 128vw;
     }
   }

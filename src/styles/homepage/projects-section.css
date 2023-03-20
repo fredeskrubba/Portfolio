@@ -5,12 +5,14 @@
     display: flex;
     flex-direction: column;
     gap: 10vw;
+    overflow-x: hidden;
 }
 
 .project{
     display: flex;
     align-items: center;
     flex-direction: column;
+    opacity: 0;
 
 }
 
@@ -48,11 +50,26 @@
     color: red;
 }
 
-
+.slide-in{
+    animation: slide-in 2s ease-in;
+    opacity: 1;
+}
 
 
 @media screen and (min-width: 992px) {
     .projects-section{
         margin-bottom: 5vw;
   }
+}
+
+@keyframes slide-in{
+    from {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

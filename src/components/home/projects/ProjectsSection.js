@@ -15,13 +15,13 @@ const ProjectsSection = () => {
   const handleScroll = () => {
     const position = window.pageYOffset;
     console.log(window.pageYOffset)
-    if (position >= 3000){
+    if (position >= 1700){
       setSlideIn1("slide-in")
     }
-    if (position >= 3800){
+    if (position >= 3200){
       setSlideIn2("slide-in")
     }
-    if (position >= 4900){
+    if (position >= 4100){
       setSlideIn3("slide-in")
     }
   };

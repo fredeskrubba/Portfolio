@@ -1,23 +1,36 @@
 import React from 'react'
 import '../../styles/homepage/about.css'
-import {ReactComponent as ArrowIcon} from '../../assets/img/arrow.svg'
-import { Link } from 'wouter'
+import Skill from './skills/Skill'
+import {ReactComponent as FigmaLogo} from "../../assets/img/figma-logo.svg"
+import {ReactComponent as PsLogo} from "../../assets/img/ps-logo.svg"
+import {ReactComponent as AiLogo} from "../../assets/img/ai-logo.svg"
 
 const About = ({img, alt}) => {
+
+  const uiSkills = [
+    {
+      title: "Figma",
+      logo: FigmaLogo
+    },
+    {
+      title: "Photoshop",
+      logo: PsLogo
+    },
+    {
+      title: "Illustrator",
+      logo: AiLogo
+    },
+  ]
   return (
-    <section className='about-section'>
-        <article className='quote-section'>
-            <h2>“Lorem ipsum dolor sit amet consectetur. Adipiscing dictumst praesent sit fermentum ultrices. Arcu aenean.” </h2>
-        </article>
-        <div className='about-img-container'>
-            <img src={img} alt={alt} />
-          <Link href='/about'>
-            <div>
-                <p>Læs mere</p>
-                <ArrowIcon/>  
+    <section className='about-section-desktop'>
+          <h2>Mit Skillset</h2>
+          <p className='sub-text'>I et hav af programmeringsprog, design-programmer, og Javascript frameworks, har jeg tilegnet mig evner inden for en række teknologier som er populære, veldokumenterede og minimalistiske</p>
+          <article className="skill-carousel">
+            <div className="ui skill-container">
+              <h2>UI/UX</h2>
+              <Skill skills={uiSkills}/>
             </div>
-          </Link>
-        </div>
+          </article>
     </section>
   )
 }

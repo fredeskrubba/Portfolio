@@ -1,70 +1,74 @@
-.about-section{
-    margin: 15vw 0;
-    background-color: #34e3ce;
-    padding: 8vw;
-}
-
-.quote-section {
-    color: #34e3ce;
-    font-style: italic;
-    background-color: #363636;
-    padding: 5vw;
-    border-radius: 20px;
-    text-align: center;
-    margin-bottom: 25vw;
-}
-
-.about-img-container{
+.about-section-desktop{
+    background-color: #39b5cb;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin: auto;
-    top: 200vw;
+    justify-content: center;
+    color: #363636;
+    padding: 2vw 5vw;
 }
 
-.about-img-container img{
-    height: 50vw;
-    width: 50vw;
-    border-radius: 100%;
-    border: #363636 solid 4px;
-    display: block;
+.skill-carousel{
+    width: 100%;
 }
-.about-img-container div {
-    background-color: #39b5cb;
-    padding: 3vw 5vw;
-    font-size: 4vw;
+
+.skill-container{
+    margin-top: 2vw;
+    padding: 1vw 20vw;
+    background-color: #363636;
+    box-sizing: border-box;
+    width: 100%;
+    color: #39b5cb;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h2{
+    font-size: 3vw;
+    margin: 0;
+    font-family: play;
+}
+
+.sub-text{
     font-weight: 700;
-    width: 40%;
-    border: 3px solid #363636;
-    transform: skew(-20deg);
-    position: relative;
-    bottom: 10vw;
+    font-size: 1.5vw;
+    width: 50%;
+}
+
+
+.ui{
+    
+}
+
+.ui h2{
+    font-size: 5vw;
+    margin: 2vw;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    align-items: center;
+    padding-bottom: 10vw;
+    
+}
+
+.skill-bar{
+    background-color: #39b5cb;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1.5vw;
-}
-
-.about-img-container:hover{
-    cursor: pointer;
-}
-.about-img-container div p {
-    transform: skew(20deg);
     color: #363636;
+    padding: 1vw 2vw;
+    border-radius: 60px;
+    font-size: 2vw;
+    width: 80%;
+    gap: 1vw;
+    font-weight: 700;
+}
+.title{
     margin: 0;
 }
-.about-img-container div svg {
-    width: 3vw;
-    transform: skew(20deg);
+svg{
+    height: 2vw;
+    width: 2vw;
 }
-
-@media screen and (min-width: 992px) {
-    .about-img-container{    
-        top: 128vw;
-    }
-  }
-

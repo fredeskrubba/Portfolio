@@ -9,8 +9,10 @@ const Footer = () => {
   return (
     <footer>
       <section className='footer-info'>
-            <h2>Kontakt Mig</h2>
-            <p>Kan du lide hvad du ser? Jeg er altid klar til en god snak over en kop kaffe, eller en korrespondance via e-mail.</p>
+            <div>
+                <h2>Kontakt Mig</h2>
+                <p>Kan du lide hvad du ser? Jeg er altid klar til en god snak over en kop kaffe, eller en korrespondance via e-mail.</p>
+            </div>
             <div className="socials">
                 <a rel="stylesheet" href="https://github.com/fredeskrubba" target="_blank">
                     <GithubLogo/>
@@ -29,6 +31,7 @@ const Footer = () => {
         <textarea cols="20" rows="10" placeholder='Besked...'/>
         <div className="submit-field">
             <p>Kontakt mig</p>
+            <SubmitArrow/>
         </div>
       </form> 
     </footer>

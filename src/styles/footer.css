@@ -1,10 +1,16 @@
 footer{
     background-color: #39B5CB;
-    padding: 4vw 8vw;
+    padding: 4vw 10vw;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
     gap: 10vw;
     color: #363636;
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .footer-info h2{
@@ -14,6 +20,18 @@ footer{
 .footer-info p{
     font-size: 2vw;
 }
+
+.socials{
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials svg{
+    width: 8vw;
+    height: 8vw;
+    display: block;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -48,6 +66,10 @@ textarea{
     max-height: 15vw;
 }
 
+textarea::-webkit-scrollbar{
+    width: 0;
+}
+
 textarea::placeholder{
     color: #39B5CB;
 }
@@ -56,3 +78,23 @@ textarea:focus{
     outline: none;
 }
 
+.submit-field{
+    display: flex;
+    background-color: #363636;
+    color: #39B5CB;
+    padding: 1vw 2vw;
+    font-weight: 700;
+    gap: 1vw;
+    align-items: center;
+    font-size: 2vw;
+    border-radius: 50px;
+    justify-content: center;
+}
+
+.submit-field p{
+    margin: 0;
+}
+
+.submit-field:hover{
+    cursor: pointer;
+}

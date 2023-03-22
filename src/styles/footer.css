@@ -1,0 +1,58 @@
+footer{
+    background-color: #39B5CB;
+    padding: 4vw 8vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10vw;
+    color: #363636;
+}
+
+.footer-info h2{
+    font-size: 5vw;
+}
+
+.footer-info p{
+    font-size: 2vw;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+input{
+    background-color: #363636;
+    border: none;
+    font-size: 2vw;
+    font-weight:100;
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    color: #39B5CB;
+}
+
+input:focus{
+    outline: none;
+    color: #39B5CB;
+}
+input::placeholder{
+    color: #39B5CB;
+}
+
+textarea{
+    background-color: #363636;
+    padding: 1vw 2vw;
+    color: #39B5CB;
+    font-size: 2vw;
+    border-radius: 20px;
+    border: none;
+    max-height: 15vw;
+}
+
+textarea::placeholder{
+    color: #39B5CB;
+}
+
+textarea:focus{
+    outline: none;
+}
+

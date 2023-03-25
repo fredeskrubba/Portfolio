@@ -1,9 +1,9 @@
 import React from 'react'
 import "../../styles/footer.css"
-import { ReactComponent as GithubLogo} from "../../assets/img/github.svg"
-import { ReactComponent as LinkedInLogo} from "../../assets/img/linkedin.svg"
-import { ReactComponent as InstaLogo} from "../../assets/img/insta.svg"
-import { ReactComponent as SubmitArrow} from "../../assets/img/submit-arrow.svg"
+import { ReactComponent as GithubLogo} from "../../assets/icons/github.svg"
+import { ReactComponent as LinkedInLogo} from "../../assets/icons/linkedin.svg"
+import { ReactComponent as InstaLogo} from "../../assets/icons/insta.svg"
+import { ReactComponent as SubmitArrow} from "../../assets/icons/submit-arrow.svg"
 
 const Footer = () => {
   return (

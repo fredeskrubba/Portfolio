@@ -1,9 +1,9 @@
 import React from 'react'
 import '../../styles/homepage/about.css'
 import Skill from './skills/Skill'
-import {ReactComponent as FigmaLogo} from "../../assets/img/figma-logo.svg"
-import {ReactComponent as PsLogo} from "../../assets/img/ps-logo.svg"
-import {ReactComponent as AiLogo} from "../../assets/img/ai-logo.svg"
+import {ReactComponent as FigmaLogo} from "../../assets/icons/figma-logo.svg"
+import {ReactComponent as PsLogo} from "../../assets/icons/ps-logo.svg"
+import {ReactComponent as AiLogo} from "../../assets/icons/ai-logo.svg"
 
 const About = ({img, alt}) => {
 

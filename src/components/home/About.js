@@ -4,7 +4,7 @@ import Skill from './skills/Skill'
 import {ReactComponent as FigmaLogo} from "../../assets/icons/figma-logo.svg"
 import {ReactComponent as PsLogo} from "../../assets/icons/ps-logo.svg"
 import {ReactComponent as AiLogo} from "../../assets/icons/ai-logo.svg"
-import { Carousel } from 'react-responsive-carousel'
+import { useState } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const About = ({img, alt}) => {
@@ -23,24 +23,39 @@ const About = ({img, alt}) => {
       logo: AiLogo
     },
   ]
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  
+  
+  const updateIndex = (newIndex) => {
+    setActiveIndex(newIndex)
+  }
+
   return (
     <section className='about-section-desktop'>
           <h2>Mit Skillset</h2>
           <p className='sub-text'>I et hav af programmeringsprog, design-programmer, og Javascript frameworks, har jeg tilegnet mig evner inden for en række teknologier som er populære, veldokumenterede og minimalistiske</p>
-          <Carousel infiniteLoop={true}>
-            <div className="ui skill-container">
-              <h2>UI/UX</h2>
-              <Skill skills={uiSkills}/>
-            </div>
-            <div className="ui skill-container">
-              <h2>Frontend</h2>
-              <Skill skills={uiSkills}/>
-            </div>
-            <div className="ui skill-container">
-              <h2>Backend</h2>
-              <Skill skills={uiSkills}/>
-            </div>
-          </Carousel>
+          <article className='carousel'>
+            <section className='inner' style={{transform: `translateX(-${activeIndex * 100}%)`}}>
+              <div className="ui skill-container">
+                <h2>UI/UX</h2>
+                <Skill skills={uiSkills}/>
+              </div>
+              <div className="ui skill-container">
+                <h2>Frontend</h2>
+                <Skill skills={uiSkills}/>
+              </div>
+              <div className="ui skill-container">
+                <h2>Backend</h2>
+                <Skill skills={uiSkills}/>
+              </div>
+            </section>
+          </article>
+          <article className="tabs">
+            <div className={` tab ${activeIndex === 0 ? "activeTab" : ""}`} onClick={()=>{updateIndex(0)}}/>
+            <div className={` tab ${activeIndex === 1 ? "activeTab" : ""}`} onClick={()=>{updateIndex(1)}}/>
+            <div className={` tab ${activeIndex === 2 ? "activeTab" : ""}`} onClick={()=>{updateIndex(2)}}/>
+          </article>
     </section>
   )
 }

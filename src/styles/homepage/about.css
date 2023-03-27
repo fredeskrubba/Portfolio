@@ -10,6 +10,8 @@
 
 
 .skill-container{
+    display: inline-flex;
+    flex-direction: column;
     margin-top: 2vw;
     padding: 1vw 20vw;
     background-color: #363636;
@@ -70,18 +72,30 @@ svg{
     width: 2vw;
 }
 
+.carousel{
+    overflow: hidden;
+}
+
+.inner{
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
 .tabs{
     display: flex;
-    justify-content: space-between;
-    margin: 2vw 20vw;
+    gap: 2vw;
+    margin-top: 1vw;
 }
 
 .tab{
-    padding: 2vw 6vw;
     background-color: #363636;
+    padding: 1vw 3vw;
     border-radius: 50px;
 }
 
 .tab:hover{
     cursor: pointer;
+}
+.activeTab{
+    background-color: #34E3CE;
 }

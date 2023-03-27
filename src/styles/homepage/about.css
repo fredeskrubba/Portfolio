@@ -8,9 +8,6 @@
     padding: 2vw 5vw;
 }
 
-.skill-carousel{
-    width: 100%;
-}
 
 .skill-container{
     margin-top: 2vw;
@@ -71,4 +68,20 @@ h2{
 svg{
     height: 2vw;
     width: 2vw;
+}
+
+.tabs{
+    display: flex;
+    justify-content: space-between;
+    margin: 2vw 20vw;
+}
+
+.tab{
+    padding: 2vw 6vw;
+    background-color: #363636;
+    border-radius: 50px;
+}
+
+.tab:hover{
+    cursor: pointer;
 }

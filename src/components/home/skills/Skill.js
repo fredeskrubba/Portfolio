@@ -1,9 +1,9 @@
 import React from 'react'
 import SkillBar from './SkillBar'
 
-const Skill = ({skills}) => {
+const Skill = ({skills, grid}) => {
   return (
-    <div className='skill'>
+    <div className={`skill ${grid ? "grid" : ""}`}>
         {skills.map((skill) => {
             return <SkillBar title={skill.title} Logo={skill.logo}/>
         })}

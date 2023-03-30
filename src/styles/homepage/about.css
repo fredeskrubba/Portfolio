@@ -8,9 +8,6 @@
     padding: 2vw 5vw;
 }
 
-.skill-carousel{
-    width: 100%;
-}
 
 .skill-container{
     margin-top: 2vw;
@@ -23,6 +20,17 @@
     border-radius: 10px;
 }
 
+.flex{
+    display: inline-flex;
+    flex-direction: column;
+    
+    gap: 2vw;
+}
+
+.grid{
+    display: inline-grid !important;
+    grid-template-columns: 1fr 1fr !important;
+}
 h2{
     font-size: 3vw;
     margin: 0;
@@ -49,7 +57,7 @@ h2{
     flex-direction: column;
     gap: 2vw;
     align-items: center;
-    padding-bottom: 10vw;
+    padding-bottom: 5vw;
     
 }
 
@@ -71,4 +79,32 @@ h2{
 svg{
     height: 2vw;
     width: 2vw;
+}
+
+.carousel{
+    overflow: hidden;
+}
+
+.inner{
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.tabs{
+    display: flex;
+    gap: 2vw;
+    margin-top: 1vw;
+}
+
+.tab{
+    background-color: #363636;
+    padding: 1vw 3vw;
+    border-radius: 50px;
+}
+
+.tab:hover{
+    cursor: pointer;
+}
+.activeTab{
+    background-color: #34E3CE;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Play:wght@400;700&display=swap');
+
 .projects-section{
     margin-top: 20vw;
     margin-bottom: 30vw;
@@ -33,9 +35,9 @@
     padding: 3vw 8vw;
     background-color: #39B5CB;
     color: #363636;
-    font-style: italic;
     font-size: 3vw;
     font-weight: 700;
+    font-family: "Play", sans-serif;
 }
 
 .link-button:hover{

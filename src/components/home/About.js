@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/homepage/about.css'
+import '../../styles/homepage/skills.css'
 import Skill from './skills/Skill'
 import {ReactComponent as FigmaLogo} from "../../assets/icons/figma-logo.svg"
 import {ReactComponent as PsLogo} from "../../assets/icons/ps-logo.svg"

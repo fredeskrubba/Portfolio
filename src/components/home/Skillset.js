@@ -16,7 +16,7 @@ import {ReactComponent as MongoLogo} from "../../assets/icons/mongo-icon.svg"
 import { useState } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const About = ({img, alt}) => {
+const Skillset = () => {
 
   const uiSkills = [
     {
@@ -80,7 +80,7 @@ const About = ({img, alt}) => {
   }
 
   return (
-    <section className='about-section-desktop'>
+    <section className='skillset-section-desktop'>
           <h2>Mit Skillset</h2>
           <p className='sub-text'>I et hav af programmeringsprog, design-programmer, og Javascript frameworks, har jeg tilegnet mig evner inden for en række teknologier som er populære, veldokumenterede og minimalistiske</p>
           <article className='carousel'>
@@ -108,4 +108,4 @@ const About = ({img, alt}) => {
   )
 }
 
-export default About
+export default Skillset

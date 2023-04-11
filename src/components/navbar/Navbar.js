@@ -22,12 +22,12 @@ const Navbar = () => {
   return (
     <nav>
       <section className='navbar-mobile'>
-            <Link href='/' className='home-button nav-button'>
-                  <HomeIcon className='home-icon'/>
+            <Link href='/'>
+                  <HomeIcon className='home-button nav-button'/>
             </Link> 
             <div className='nav-divider'></div>
-            <Link href='/contact' className='contact-button nav-button'>
-                  <ContactIcon className='contact-icon'/>
+            <Link href='/contact'>
+                  <ContactIcon className='contact-button nav-button'/>
             </Link>
             <div className='nav-divider '></div>           
             <BurgerIcon className='nav-button burger-button' onClick={

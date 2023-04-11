@@ -13,11 +13,9 @@
     left: 0;
     right: 0;
     margin: auto;
-    z-index: 1;
+    z-index: 2;
 }
 .home-button{
-    background-color: #363636;
-    fill: #39B5CB;
     justify-self: flex-end;
 }
 
@@ -52,6 +50,8 @@
     justify-content: center;
     align-items: center;
     margin: 1.5vw;
+    background-color: #363636;
+    fill: #39B5CB;
 }
 
 .nav-divider{
@@ -74,6 +74,7 @@
     transition: 300ms ease-in-out;
     pointer-events: none;
     overflow: hidden;
+    z-index: 1;
 }
 
 .burger-menu-visible{
@@ -87,6 +88,7 @@
     height: 100%;
     background-color: #363636c8;
     transition: 300ms ease-in-out;
+    z-index: 1;
 }
 
 .link-menu{

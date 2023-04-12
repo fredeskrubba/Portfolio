@@ -1,4 +1,4 @@
-.skillset-section-desktop{
+.skillset-section{
     background-color: #39b5cb;
     display: flex;
     flex-direction: column;
@@ -107,4 +107,31 @@ svg{
 }
 .activeTab{
     background-color: #34E3CE;
+}
+
+@media screen and (max-width: 992px){
+    .skillset-section h2{
+        font-size: 8vw;
+    }
+    .skillset-section p{
+        font-size: 3.8vw;
+        width: 100%;
+    }
+
+    .skill-bar{
+        width: 100%;
+    }
+    .skill-bar svg{
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .tabs{
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 5vw 0;
+    }
+    .tab{
+        padding: 3vw 8vw;
+    }
 }

@@ -64,6 +64,7 @@ textarea{
     border-radius: 20px;
     border: none;
     max-height: 15vw;
+    resize: none;
 }
 
 textarea::-webkit-scrollbar{

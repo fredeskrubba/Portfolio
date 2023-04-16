@@ -57,7 +57,7 @@ const Footer = () => {
                       </a>
                   </div>
             </form>
-            <article>
+            <article className='right-grid'>
               <textarea placeholder='Besked...' className='text-box-mobile'/>
               <div className="submit-field">
                   <p>Kontakt mig</p>

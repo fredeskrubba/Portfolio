@@ -45,10 +45,6 @@ const Footer = () => {
             <form>
               <input type="text" placeholder='Navn...'/>
               <input type="text" placeholder='E-mail...'/>
-              <div className="submit-field">
-                  <p>Kontakt mig</p>
-                  <SubmitArrow/>
-              </div>
               <div className="socials">
                       <a rel="stylesheet" href="https://github.com/fredeskrubba" target="_blank">
                           <GithubLogo/>
@@ -60,8 +56,14 @@ const Footer = () => {
                           <InstaLogo/>
                       </a>
                   </div>
-            </form> 
-            <textarea placeholder='Besked...' className='text-box-mobile'/>
+            </form>
+            <article>
+              <textarea placeholder='Besked...' className='text-box-mobile'/>
+              <div className="submit-field">
+                  <p>Kontakt mig</p>
+                  <SubmitArrow/>
+              </div>
+            </article>
           </section>
       </article>
       

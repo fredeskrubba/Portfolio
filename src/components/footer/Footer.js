@@ -18,10 +18,10 @@ const Footer = () => {
                     <a rel="stylesheet" href="https://github.com/fredeskrubba" target="_blank">
                         <GithubLogo/>
                     </a>
-                    <a rel="stylesheet" href="https://github.com/fredeskrubba" target="_blank">
+                    <a rel="stylesheet" href="https://www.linkedin.com/in/frederik-skrubbeltrang-698b4a1a3/" target="_blank">
                         <LinkedInLogo/>
                     </a>
-                    <a rel="stylesheet" href="https://github.com/fredeskrubba" target="_blank">
+                    <a rel="stylesheet" href="https://www.instagram.com/" target="_blank">
                         <InstaLogo/>
                     </a>
                 </div>
@@ -53,10 +53,10 @@ const Footer = () => {
                       <a rel="stylesheet" href="https://github.com/fredeskrubba" target="_blank">
                           <GithubLogo/>
                       </a>
-                      <a rel="stylesheet" href="https://github.com/fredeskrubba" target="_blank">
+                      <a rel="stylesheet" href="https://www.linkedin.com/in/frederik-skrubbeltrang-698b4a1a3/" target="_blank">
                           <LinkedInLogo/>
                       </a>
-                      <a rel="stylesheet" href="https://github.com/fredeskrubba" target="_blank">
+                      <a rel="stylesheet" href="https://www.instagram.com" target="_blank">
                           <InstaLogo/>
                       </a>
                   </div>

@@ -18,10 +18,10 @@ const ProjectsSection = () => {
     if (position >= 1700){
       setSlideIn1("slide-in")
     }
-    if (position >= 3200){
+    if (position >= 2500){
       setSlideIn2("slide-in")
     }
-    if (position >= 4100){
+    if (position >= 3200){
       setSlideIn3("slide-in")
     }
   };

@@ -80,7 +80,7 @@ const Skillset = () => {
   }
 
   return (
-    <section className='skillset-section-desktop'>
+    <section className='skillset-section'>
           <h2>Mit Skillset</h2>
           <p className='sub-text'>I et hav af programmeringsprog, design-programmer, og Javascript frameworks, har jeg tilegnet mig evner inden for en række teknologier som er populære, veldokumenterede og minimalistiske</p>
           <article className='carousel'>

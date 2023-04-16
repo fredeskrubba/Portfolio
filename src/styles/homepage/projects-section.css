@@ -62,6 +62,18 @@
     .projects-section{
         margin-bottom: 5vw;
   }
+
+}
+
+@media screen and (max-width: 992px) {
+    .slide-in{
+        animation: none;
+      }
+    
+      .project{
+        opacity: 1;
+      }
+
 }
 
 @keyframes slide-in{

@@ -5,9 +5,9 @@ import { ReactComponent as LinkedInLogo} from "../../assets/icons/linkedin.svg"
 import { ReactComponent as InstaLogo} from "../../assets/icons/insta.svg"
 import { ReactComponent as SubmitArrow} from "../../assets/icons/submit-arrow.svg"
 
-const Footer = () => {
+const Footer = ({reference}) => {
   return (
-    <footer>
+    <footer ref={reference}>
       <article className='footer-desktop'>
         <section className='footer-info'>
                 <div>

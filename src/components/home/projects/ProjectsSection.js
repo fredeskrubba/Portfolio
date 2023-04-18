@@ -7,7 +7,7 @@ import experience from '../../../assets/img/experience.jpg'
 import { useState, useEffect } from 'react'
 
 
-const ProjectsSection = () => {
+const ProjectsSection = ({scrollToContact}) => {
   const [slideIn1, setSlideIn1] = useState("")
   const [slideIn2, setSlideIn2] = useState("")
   const [slideIn3, setSlideIn3] = useState("")
@@ -43,7 +43,7 @@ const ProjectsSection = () => {
             img={contact}
             alt='contact'
             buttonText='Kontakt Mig'
-            url='/contact'
+            url='#contact'
         />
         <Project
             animation={slideIn3}

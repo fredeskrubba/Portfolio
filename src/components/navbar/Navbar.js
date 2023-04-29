@@ -41,9 +41,9 @@ const Navbar = ({scrollToContact, scrollToAbout}) => {
       <section className='navbar-desktop'>
             <ActiveLink href='/'>Hjem</ActiveLink>
             <article>
-              <p onClick={()=>{scrollToAbout()}} className='navigation-button'>Kontakt</p>
+              <p onClick={()=>{scrollToAbout()}} className='navigation-button'>Om</p>
               <ActiveLink href='/projects'>Projekter</ActiveLink>
-              <p onClick={()=>{scrollToContact()}} className='navigation-button'>Om</p>
+              <p onClick={()=>{scrollToContact()}} className='navigation-button'>Kontakt</p>
             </article>
       </section>
     </nav>

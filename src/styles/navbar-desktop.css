@@ -40,6 +40,18 @@ a:hover{
 .active{
     color: #34E3CE;
 }
+
+.navigation-button{
+    color: #39B5CB;
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-button:hover{
+    color: #34E3CE;
+    cursor: pointer;
+}
 @media screen and (max-width: 992px) {
     .navbar-desktop{
         display: none;

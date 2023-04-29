@@ -17,7 +17,7 @@ const ActiveLink = props => {
   );
 };
 
-const Navbar = ({scrollToContact}) => {
+const Navbar = ({scrollToContact, scrollToAbout}) => {
   const {visible, setVisible, burgerClass, setBurgerClass} = useBurgerStore()
   return (
     <nav>
@@ -41,9 +41,9 @@ const Navbar = ({scrollToContact}) => {
       <section className='navbar-desktop'>
             <ActiveLink href='/'>Hjem</ActiveLink>
             <article>
-              <ActiveLink href='/about'>Om</ActiveLink>
+              <p onClick={()=>{scrollToAbout()}} className='navigation-button'>Kontakt</p>
               <ActiveLink href='/projects'>Projekter</ActiveLink>
-              <p onClick={()=>{scrollToContact()}}>Kontakt</p>
+              <p onClick={()=>{scrollToContact()}} className='navigation-button'>Om</p>
             </article>
       </section>
     </nav>

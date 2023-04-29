@@ -1,6 +1,5 @@
 import {  Route } from 'wouter'
 import Home from './pages/Home'
-import About from './pages/About'
 import { Projects } from './pages/Projects'
 import './styles/style.css'
 import Navbar from './components/navbar/Navbar'
@@ -10,21 +9,25 @@ import { useRef } from 'react'
 
 function App() {
   const contactRef = useRef(null);
+  const aboutRef = useRef(null);
 
-  function scrollToSection() {
+  function scrollToContact() {
     if (contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }
 
+  function scrollToAbout() {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
         <div>
-          <Navbar scrollToContact={scrollToSection}/>
+          <Navbar scrollToContact={scrollToContact} scrollToAbout={scrollToAbout}/>
           <BurgerMenu/>
-
-          <Route path='/' component={Home}/>
-          <Route path='/about' element={About}/>
-          <Route path='/projects' element={Projects}/>
+          <Route path='/'><Home reference={aboutRef}/></Route>
           <Footer id="contact" reference={contactRef}/>
         </div>
         

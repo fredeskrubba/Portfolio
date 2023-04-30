@@ -4,8 +4,9 @@ import {ReactComponent as ContactIcon} from '../../assets/icons/contact-icon.svg
 import {ReactComponent as BurgerIcon} from '../../assets/icons/burger-icon.svg'
 import '../../styles/navbar-mobile.css'
 import '../../styles/navbar-desktop.css'
-import { Link, useRoute } from 'wouter'
+import { Link, useRoute, setLocation } from 'wouter'
 import { useBurgerStore } from '../stores/useBurgerStore'
+import { useEffect } from 'react'
 
 // component for making links active depending on current page
 const ActiveLink = props => {
@@ -19,6 +20,13 @@ const ActiveLink = props => {
 
 const Navbar = ({scrollToContact, scrollToAbout}) => {
   const {visible, setVisible, burgerClass, setBurgerClass} = useBurgerStore()
+
+  useEffect(() => {
+    // Redirect to homepage
+    setLocation("/");
+      
+
+  }, []);
   return (
     <nav>
       <section className='navbar-mobile'>

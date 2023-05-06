@@ -80,30 +80,32 @@ const Skillset = () => {
   }
 
   return (
-    <section className='skillset-section'>
-          <h2>Mit Skillset</h2>
-          <p className='sub-text'>I et hav af programmeringsprog, design-programmer, og Javascript frameworks, har jeg tilegnet mig evner inden for en række teknologier som er populære, veldokumenterede og minimalistiske</p>
-          <article className='carousel'>
-            <section className='inner' style={{transform: `translateX(-${activeIndex * 100}%)`}}>
-              <div className="flex skill-container">
-                <h2>UI/UX</h2>
-                <Skill skills={uiSkills}/>
-              </div>
-              <div className="flex skill-container">
-                <h2>Frontend</h2>
-                <Skill skills={frontSkills} grid={true}/>
-              </div>
-              <div className="flex skill-container">
-                <h2>Backend</h2>
-                <Skill skills={backSkills}/>
-              </div>
-            </section>
-          </article>
-          <article className="tabs">
-            <div className={` tab ${activeIndex === 0 ? "activeTab" : ""}`} onClick={()=>{updateIndex(0)}}/>
-            <div className={` tab ${activeIndex === 1 ? "activeTab" : ""}`} onClick={()=>{updateIndex(1)}}/>
-            <div className={` tab ${activeIndex === 2 ? "activeTab" : ""}`} onClick={()=>{updateIndex(2)}}/>
-          </article>
+    <section>
+          <h2 className='section-header'>Mit Skillset</h2>
+          <div className='skillset-section'>
+            <p className='sub-text'>I et hav af programmeringsprog, design-programmer, og Javascript frameworks, har jeg tilegnet mig evner inden for en række teknologier som er populære, veldokumenterede og minimalistiske</p>
+            <article className='carousel'>
+              <section className='inner' style={{transform: `translateX(-${activeIndex * 100}%)`}}>
+                <div className="flex skill-container">
+                  <h2>UI/UX</h2>
+                  <Skill skills={uiSkills}/>
+                </div>
+                <div className="flex skill-container">
+                  <h2>Frontend</h2>
+                  <Skill skills={frontSkills} grid={true}/>
+                </div>
+                <div className="flex skill-container">
+                  <h2>Backend</h2>
+                  <Skill skills={backSkills}/>
+                </div>
+              </section>
+            </article>
+            <article className="tabs">
+              <div className={` tab ${activeIndex === 0 ? "activeTab" : ""}`} onClick={()=>{updateIndex(0)}}/>
+              <div className={` tab ${activeIndex === 1 ? "activeTab" : ""}`} onClick={()=>{updateIndex(1)}}/>
+              <div className={` tab ${activeIndex === 2 ? "activeTab" : ""}`} onClick={()=>{updateIndex(2)}}/>
+            </article>
+          </div>
     </section>
   )
 }

@@ -1,10 +1,10 @@
 .skillset-section{
-    background-color: #39b5cb;
+    background-color: #363636;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #363636;
+    color: #39b5cb;
     padding: 2vw 5vw;
 }
 
@@ -16,6 +16,7 @@
     box-sizing: border-box;
     width: 100%;
     color: #39b5cb;
+    border: 2px solid #39b5cb;
     text-align: center;
     border-radius: 10px;
 }
@@ -43,7 +44,17 @@ h2{
     width: 50%;
 }
 
-
+.section-header{
+    color: #34E3CE;
+    border: 2px solid #34E3CE;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 2vw;
+    font-size: 10vw;
+}
 .ui{
     
 }
@@ -98,6 +109,7 @@ svg{
 
 .tab{
     background-color: #363636;
+    border: 2px solid #39b5cb;
     padding: 1vw 3vw;
     border-radius: 50px;
 }
@@ -107,6 +119,7 @@ svg{
 }
 .activeTab{
     background-color: #34E3CE;
+    border-color: #34E3CE;
 }
 
 @media screen and (max-width: 992px){

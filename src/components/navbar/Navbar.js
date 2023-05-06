@@ -4,7 +4,7 @@ import {ReactComponent as ContactIcon} from '../../assets/icons/contact-icon.svg
 import {ReactComponent as BurgerIcon} from '../../assets/icons/burger-icon.svg'
 import '../../styles/navbar-mobile.css'
 import '../../styles/navbar-desktop.css'
-import { Link, useRoute, setLocation } from 'wouter'
+import { Link, useRoute, useLocation } from 'wouter'
 import { useBurgerStore } from '../stores/useBurgerStore'
 import { useEffect } from 'react'
 
@@ -20,6 +20,7 @@ const ActiveLink = props => {
 
 const Navbar = ({scrollToContact, scrollToAbout}) => {
   const {visible, setVisible, burgerClass, setBurgerClass} = useBurgerStore()
+  const [location, setLocation] = useLocation();
 
   useEffect(() => {
     // Redirect to homepage

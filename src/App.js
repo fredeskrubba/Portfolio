@@ -1,5 +1,4 @@
-import {  Route, setLocation} from 'wouter'
-import Home from './pages/Home'
+import Home from './components/Home'
 import './styles/style.css'
 import Navbar from './components/navbar/Navbar'
 import BurgerMenu from './components/navbar/BurgerMenu'
@@ -26,8 +25,8 @@ function App() {
   return (
         <div>
           <Navbar scrollToContact={scrollToContact} scrollToAbout={scrollToAbout}/>
+          <Home/>
           <BurgerMenu/>
-          <Route path='/'><Home reference={aboutRef}/></Route>
           <Footer id="contact" reference={contactRef}/>
         </div>
         

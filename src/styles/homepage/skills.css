@@ -16,7 +16,7 @@
     box-sizing: border-box;
     width: 100%;
     color: #39b5cb;
-    border: 2px solid #39b5cb;
+    border: 5px solid #39b5cb;
     text-align: center;
     border-radius: 10px;
 }
@@ -46,10 +46,9 @@ h2{
 
 .section-header{
     color: #34E3CE;
-    border: 2px solid #34E3CE;
+    border: 5px solid #34E3CE;
     border-left: none;
     border-right: none;
-    width: 100%;
     margin: 0;
     text-align: center;
     padding: 2vw;
@@ -146,5 +145,12 @@ svg{
     }
     .tab{
         padding: 3vw 8vw;
+    }
+    .section-header{
+        border: 2px solid #34E3CE;
+    }
+
+    .skill-container{
+        border: 2px solid #39b5cb;
     }
 }

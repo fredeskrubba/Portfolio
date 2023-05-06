@@ -1,10 +1,10 @@
 .footer-desktop{
-    background-color: #39B5CB;
+    background-color: #363636;
     padding: 4vw 10vw;
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 10vw;
-    color: #363636;
+    color: #39B5CB;
 }
 
 .footer-info{
@@ -47,6 +47,7 @@ input{
     padding: 1vw 2vw;
     border-radius: 50px;
     color: #39B5CB;
+    border: 3px solid #39B5CB;
 }
 
 input:focus{
@@ -68,6 +69,7 @@ textarea{
     resize: none;
     box-sizing: border-box;
     font-family: play;
+    border: 3px solid #39B5CB;
 }
 
 textarea::-webkit-scrollbar{
@@ -94,6 +96,7 @@ textarea:focus{
     border-radius: 50px;
     justify-content: center;
     box-sizing: border-box;
+    border: 3px solid #39B5CB;
 }
 
 .submit-field p{
@@ -119,9 +122,7 @@ form{
     width: 100%;
 }
 
-form input{
-    width: 100%;
-}
+
 .form-grid{
     display: grid;
     grid-template-columns: 1fr 2fr;

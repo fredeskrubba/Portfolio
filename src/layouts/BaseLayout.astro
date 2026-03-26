@@ -1,0 +1,25 @@
+---
+import "../styles/variables.css";
+import Navbar from "../components/Navbar.astro";
+
+const { Title = "Frederik Skrubbeltrang" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{Title}</title>
+  </head>
+  <body>
+    <main>
+        <Navbar/>
+        <slot />
+    </main>
+  </body>
+  <style>
+    h1 {
+      font-size: 2rem;
+    }
+  </style>
+</html>

@@ -1,13 +1,47 @@
 ---
+import Lightmode from "../assets/icons/Lightmode.svg";
+import EnglishLanguage from "../assets/icons/English-language.svg";
 ---
 
-<nav>
-    <ul>
-        <li>
-
-        </li>
-        <li>
-            
-        </li>
-    </ul>
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><img src={Lightmode.src} alt="Light mode" /></li>
+    <li><img src={EnglishLanguage.src} alt="English language" /></li>
+  </ul>
 </nav>
+
+<style>
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .nav-icons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-icons img {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+  }
+</style>

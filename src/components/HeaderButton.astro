@@ -1,0 +1,61 @@
+---
+import "../styles/variables.css";
+
+interface HeaderButtonProps {
+  text: string;
+  /**
+   * A string of JavaScript code to run when clicked.
+   * Note: Astro can't take real function props unless you use client-side frameworks/islands.
+   */
+  onClick?: string;
+}
+
+const { text, onClick } = Astro.props as HeaderButtonProps;
+---
+
+{
+  onClick ? (
+    <button class="header-btn" type="button" onclick={onClick}>
+      {text}
+    </button>
+  ) : (
+    <button class="header-btn" type="button">
+      {text}
+    </button>
+  )
+}
+
+<style>
+  .header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.8rem 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    background: var(--darkmode);
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 150ms ease, transform 120ms ease, box-shadow 150ms ease, color 150ms ease;
+    user-select: none;
+  }
+
+  .header-btn:hover {
+    background: var(--hover-dark);
+    color: var(--main-color);
+    transform: scale(1.05);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+  }
+
+  .header-btn:active {
+    transform: scale(1.02) translateY(1px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    color: var(--darkmode);
+  }
+
+  .header-btn:focus-visible {
+    outline: 2px solid var(--hover-dark);
+    outline-offset: 2px;
+  }
+</style>

@@ -1,6 +1,6 @@
 ---
 import "../styles/variables.css";
-import Navbar from "../components/Navbar.astro";
+import Header from "../components/Header.astro";
 
 const { Title = "Frederik Skrubbeltrang" } = Astro.props;
 ---
@@ -9,15 +9,27 @@ const { Title = "Frederik Skrubbeltrang" } = Astro.props;
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=ibm-plex-sans:400,500,600,700" />
     <title>{Title}</title>
   </head>
   <body>
     <main>
-        <Navbar/>
+       <Header/>
         <slot />
     </main>
   </body>
   <style>
+    :global(*) {
+      box-sizing: border-box;
+    }
+
+    :global(body) {
+      margin: 0;
+      font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+      background-color: var(--darkmode);
+      color: var(--main-color);
+    }
+
     h1 {
       font-size: 2rem;
     }

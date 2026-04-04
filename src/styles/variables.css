@@ -11,7 +11,7 @@
 html {
   color-scheme: dark;
   --theme-bg: var(--darkmode);
-  --theme-text: var(--main-color);
+  --theme-text: var(--darkmode);
   --theme-border: var(--darkmode);
   --theme-toggle-disc: var(--darkmode-2);
   --theme-toggle-icon: var(--main-color);

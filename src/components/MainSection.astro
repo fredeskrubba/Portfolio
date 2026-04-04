@@ -1,0 +1,28 @@
+---
+import InfoBox from '../components/InfoBox.astro';
+---
+
+
+<section>
+    <InfoBox />
+</section>
+
+
+<style>
+  section {
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--text);
+    text-align: center;
+  }
+
+
+  p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+</style>

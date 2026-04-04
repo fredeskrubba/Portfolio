@@ -41,7 +41,9 @@ const { Title = "Frederik Skrubbeltrang" } = Astro.props;
       min-height: 100vh;
       font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
       background-color: var(--theme-bg);
-      background-image: var(--page-pattern);
+      background-image:
+            var(--page-pattern),
+            linear-gradient(180deg, var(--main-color) 3%, var(--theme-bg) 54%);
       background-repeat: repeat;
       color: var(--theme-text);
     }

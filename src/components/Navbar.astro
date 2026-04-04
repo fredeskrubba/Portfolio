@@ -17,7 +17,7 @@ import EnglishLanguage from "../assets/icons/English-language.svg";
     justify-content: flex-end;
     gap: 1rem;
     width: 100%;
-    border-bottom: 1px solid var(--darkmode);
+    border-bottom: 1px solid var(--theme-border);
     padding: 5px 15px 15px 15px;
   }
 
@@ -45,6 +45,33 @@ import EnglishLanguage from "../assets/icons/English-language.svg";
     display: block;
   }
 
-
-
+  .nav-links > li:first-child {
+    cursor: pointer;
+  }
 </style>
+
+<script>
+  function bindThemeToggle() {
+    const ul = document.querySelector(".nav-links");
+    const firstLi = ul?.querySelector("li:first-child");
+    if (!firstLi) return;
+
+    firstLi.addEventListener("click", () => {
+      const root = document.documentElement;
+      const isLight = root.getAttribute("data-theme") === "light";
+      if (isLight) {
+        root.removeAttribute("data-theme");
+        localStorage.setItem("theme", "dark");
+      } else {
+        root.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bindThemeToggle);
+  } else {
+    bindThemeToggle();
+  }
+</script>

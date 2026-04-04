@@ -1,28 +1,20 @@
 ---
 import "../styles/variables.css";
 import Navbar from "./Navbar.astro";
-import HeaderButton from "./HeaderButton.astro";
 ---
 
 
 <header>
      <Navbar/>
-     <article>
-        	<h1>Hej jeg er Frederik</h1>
-	        <p>Jeg er webudvikler som bygger skalerbare løsninger med fokus på brugeroplevelse og forretningsværdi. I mit arbejde har jeg fokus på et stærkt teknisk fundament og jeg tager ejerskab, tænker i løsninger og trives i miljøer, hvor man hurtigt tester idéer og omsætter dem til værdi.</p>	
-     </article>
-     <div>
-        <HeaderButton text="Download CV" onClick="console.log('Download CV clicked')" />
-        <HeaderButton text="Kontakt mig" onClick="console.log('Kontakt clicked')" />
-     </div>
+
 </header>
 
 <style>
     header {
         width: 100%;
-        border-bottom: 1px solid var(--darkmode);
+        
         padding: 45px 80px;
-        background: linear-gradient(180deg,var(--main-color) 3%, var(--darkmode) 94%);
+        background: linear-gradient(180deg, var(--main-color) 3%, var(--theme-bg) 94%);
         color: var(--darkmode);
         min-height: 500px;
     }

@@ -21,7 +21,7 @@ html {
 html[data-theme="light"] {
   color-scheme: light;
   --theme-bg: var(--lightmode);
-  --theme-text: var(--darkmode);
+  --theme-text: var(--lightmode);
   --theme-border: var(--lightmode);
   --theme-toggle-disc: #ffffff;
   --theme-toggle-icon: var(--darkmode);

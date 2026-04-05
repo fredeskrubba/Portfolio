@@ -1,0 +1,23 @@
+{
+    "projects": [
+    {
+        "title": "Skrubbanote",
+        "description": "Skrubbanote is a note-taking app built with React Native, designed to provide users with a seamless and intuitive experience for organizing their thoughts and ideas on the go.",
+        "image": "/assets/images/projects/skrubbanote.png",
+        "url": "https://github.com/fredeskrubba/skrubbanote",
+        "stack": [
+            {
+                "name": "React Native",
+                "icon": "/assets/icons/react-icon.svg"
+            },
+            {
+                "name": "Expo",
+                "icon": "/assets/icons/expo-icon.svg"
+            },
+            {
+                "name": "Firebase",
+                "icon": "/assets/icons/firebase-icon.svg"
+            }
+            ]
+    }]
+}

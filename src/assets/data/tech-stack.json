@@ -1,0 +1,28 @@
+{
+    "stack": [
+        {
+            "name": "React",
+            "icon": "/assets/icons/react-icon.svg"
+        },
+        {
+            "name": "Blazor",
+            "icon": "/assets/icons/blazor-icon.svg"
+        },
+        {
+            "name": ".NET",
+            "icon": "/assets/icons/dotnet-icon.svg"
+        },
+        {
+            "name": "Redux",
+            "icon": "/assets/icons/redux-icon.svg"
+        },
+        {
+            "name": "SQL Server",
+            "icon": "/assets/icons/sqlserver-icon.svg"
+        },
+        {
+            "name": "Entity Framework Core",
+            "icon": "/assets/icons/efcore-icon.svg"
+        }
+    ]
+}

@@ -1,20 +1,33 @@
 ---
-import githubIcon from '../assets/icons/github-icon.svg';
-import linkedinIcon from '../assets/icons/linkedin-icon.svg';
-import mailIcon from '../assets/icons/mail-icon.svg';
+import GithubIcon from '../assets/icons/github-icon.svg';
+import LinkedinIcon from '../assets/icons/linkedin-icon.svg';
+import MailIcon from '../assets/icons/mail-icon.svg';
 ---
 
 <article class="infobox">
     <img src="src/assets/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-    <button type="button" class="cv-button">Download mit CV</button>
+    <button type="button" class="cv-button" id="cv-download">Download mit CV</button>
 
     <div class="link-container">
-        <a href="https://github.com/fredeskrubba" target="_blank" rel="noopener noreferrer"><img src={githubIcon.src} alt="GitHub" /></a>
-        <a href="https://www.linkedin.com/in/frederik-skrubbeltrang-698b4a1a3/" target="_blank" rel="noopener noreferrer"><img src={linkedinIcon.src} alt="LinkedIn" /></a>
-        <a href="mailto:frederik.skrubbeltrang@proton.me" target="_blank" rel="noopener noreferrer"><img src={mailIcon.src} alt="Mail" /></a>
+        <a href="https://github.com/fredeskrubba" target="_blank" rel="noopener noreferrer"><GithubIcon /></a>
+        <a href="https://www.linkedin.com/in/frederik-skrubbeltrang-698b4a1a3/" target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a>
+        <a href="mailto:frederik.skrubbeltrang@proton.me" target="_blank" rel="noopener noreferrer"><MailIcon /></a>
     </div>
 </article>
 
+<script>
+    const cvButton = document.getElementById('cv-download');
+    
+    function downloadCV() {
+        const link = document.createElement('a');
+        link.href = 'src/assets/Frederik_Skrubbeltrang_CV.pdf';
+        link.download = 'Frederik_Skrubbeltrang_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    cvButton.addEventListener('click', downloadCV);
+</script>
 
 <style>
     .infobox {
@@ -46,7 +59,7 @@ import mailIcon from '../assets/icons/mail-icon.svg';
         font-weight: 600;
     }
 
-    .cv-button:hover {
+    .cv-button:hover, .link-container a:hover {
         background-color: var(--hover-light);
         cursor: pointer;
     }
@@ -70,7 +83,8 @@ import mailIcon from '../assets/icons/mail-icon.svg';
         padding: 22px;
     }
 
-    .link-container a:hover {
-        cursor: pointer;
+    .link-container a svg {
+       fill: var(--theme-bg);
     }
+
 </style>

@@ -1,0 +1,202 @@
+---
+interface Experience {
+  title: string;
+  position: string;
+  duration: string;
+  description: string;
+  stack: { name: string; icon: string; }[];
+}
+
+interface StackItem {
+  name: string;
+  icon: string;
+}
+
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  stack: StackItem[];
+}
+
+interface Props {
+  data: Project[] | Experience[] | StackItem[];
+  title: string;
+}
+
+import ExperienceIcon from '../assets/icons/experience-icon.svg';
+import Arrow from '../assets/icons/Arrow.svg';
+const { data, title } = Astro.props;
+---
+
+<section class="carousel-section" data-count={data.length}>
+  <article class="info-header">
+    <div class="flex">
+      <ExperienceIcon />
+      <h2>{title}</h2>
+    </div>
+    {
+      data.length > 1 && (
+      <div class="carousel-controls">
+        <button class="nav-btn prev" id="prev-btn" aria-label="Previous">
+          <Arrow />
+        </button>
+  
+        <div class="dots-wrapper">
+          {data.map((_, i) => (
+            <span class={`dot ${i === 0 ? 'active' : ''}`} data-index={i}></span>
+          ))}
+        </div>
+  
+        <button class="nav-btn next" id="next-btn" aria-label="Next">
+          <Arrow style="transform: rotate(180deg);" />
+        </button>
+      </div>
+        
+      )
+    }
+  </article>
+  <div class="carousel-window" id="carousel-window">
+    {data.map((item) => (
+      <div class="carousel-item">
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+      </div>
+    ))}
+  </div>
+
+  
+</section>
+
+<style>
+    .info-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--main-color);
+    margin-bottom: 10px;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .info-header h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--main-color);
+  }
+
+  .carousel-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .carousel-window {
+    display: flex;
+    overflow: hidden; /* Hide the items that aren't active */
+    scroll-behavior: smooth;
+    border-radius: 8px;
+    background: var(--main-color);
+  }
+
+  .carousel-item {
+    flex: 0 0 100%; /* Each item takes full width of container */
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1rem;
+  }
+
+  .nav-btn {
+    background: var(--theme-bg);
+    border: 1px solid var(--main-color);
+    color: var(--theme-bg);
+    padding: 5px 15px;
+    cursor: pointer;
+    width: 45px;    
+    height: 45px;
+    border-radius: 50%;
+  }
+
+  .nav-btn:hover {
+    background: var(--theme-bg);
+    color: white;
+  }
+
+  .dots-wrapper {
+    display: flex;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    transition: 0.3s;
+    border: 1px solid var(--main-color);
+  }
+
+  .dot.active {
+    background: var(--theme-bg);
+    transform: scale(1.3);
+  }
+</style>
+
+<script>
+  // Find all carousels on the page
+  const carousels = document.querySelectorAll('.carousel-container');
+
+  carousels.forEach((container) => {
+    const window = container.querySelector('#carousel-window');
+    const prevBtn = container.querySelector('#prev-btn');
+    const nextBtn = container.querySelector('#next-btn');
+    const dots = container.querySelectorAll('.dot');
+    const totalItems = parseInt(container.getAttribute('data-count'));
+    
+    let currentIndex = 0;
+
+    const updateCarousel = (index) => {
+      // Ensure index stays within bounds
+      if (index < 0) index = totalItems - 1; // Loop to end
+      if (index >= totalItems) index = 0;    // Loop to start
+      
+      currentIndex = index;
+
+      // Scroll the window
+      const offset = window.clientWidth * currentIndex;
+      window.scrollTo({ left: offset, behavior: 'smooth' });
+
+      // Update dots
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    };
+
+    prevBtn.addEventListener('click', () => updateCarousel(currentIndex - 1));
+    nextBtn.addEventListener('click', () => updateCarousel(currentIndex + 1));
+
+    // Optional: Allow clicking dots directly
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => updateCarousel(i));
+    });
+
+    // Resize listener to keep things aligned if window size changes
+    window.addEventListener('resize', () => updateCarousel(currentIndex));
+  });
+</script>

@@ -1,0 +1,36 @@
+{
+    "experience": [
+        {
+            "title": "Softnotik aps",
+            "position": "Software Developer",
+            "duration": "December 2022 - February 2023",
+            "description": "MinForening – Fullstack UdviklerUdvikling af en alt-i-én administrationsplatform til foreningslivet. Arkitektur: Modernisering og vedligeholdelse af platformen med et teknologispænd fra React til Blazor, understøttet af en robust .NET backend. State Management: Implementering af komplekse flows ved hjælp af Redux for at sikre en konsistent brugeroplevelse på tværs af platformens mange moduler. Data & Backend: Design af database-skemaer i SQL Server og effektiv datahåndtering via Entity Framework Core. Fokus: Optimering af essentielle administrative værktøjer, der letter hverdagen for foreningsledere.",
+            "stack": [
+                {
+                    "name": "React",
+                    "icon": "/assets/icons/react-icon.svg"
+                },
+                {
+                    "name": "Blazor",
+                    "icon": "/assets/icons/blazor-icon.svg"
+                },
+                {
+                    "name": ".NET",
+                    "icon": "/assets/icons/dotnet-icon.svg"
+                },
+                {
+                    "name": "Redux",
+                    "icon": "/assets/icons/redux-icon.svg"
+                },
+                {
+                    "name": "SQL Server",
+                    "icon": "/assets/icons/sqlserver-icon.svg"
+                },
+                {
+                    "name": "Entity Framework Core",
+                    "icon": "/assets/icons/efcore-icon.svg"
+                }
+            ]
+        }
+    ]
+}

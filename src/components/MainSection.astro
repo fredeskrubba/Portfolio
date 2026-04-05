@@ -1,10 +1,36 @@
 ---
 import InfoBox from '../components/InfoBox.astro';
+import { experience } from '../assets/data/experience.json';
+import CarouselSection from '../components/CarouselSection.astro';
+import { stack } from '../assets/data/tech-stack.json';
+import { projects } from '../assets/data/projects.json';
+import ExperienceIcon from '../assets/icons/experience-icon.svg';
+import StackIcon from '../assets/icons/stack-icon.svg';
+import ProjectsIcon from '../assets/icons/projects-icon.svg';
 ---
 
 
 <section>
     <InfoBox />
+    <section class="info-section">
+      <div class="intro">
+        <h1>Hi I'm Frederik</h1>
+        <article class="intro-box">
+          <p>
+            I'm a 22-year-old software developer based in Denmark. I have a passion for creating innovative and efficient software solutions that make a positive impact on people's lives. With a strong background in programming and problem-solving, I enjoy tackling complex challenges and continuously learning new technologies to stay at the forefront of the industry.
+          </p>
+        </article>
+      </div>
+      <div class="experience">
+        <CarouselSection data={experience} title="My Experience" />
+      </div>
+      <div class="stack">
+        <CarouselSection data={stack} title="My Tech Stack" />
+      </div>
+      <div class="projects">
+        <CarouselSection data={projects} title="My Projects" />
+      </div>
+    </section>
 </section>
 
 
@@ -12,17 +38,29 @@ import InfoBox from '../components/InfoBox.astro';
   section {
     padding: 0 80px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
+    grid-template-columns: 1fr 3fr;
     background-color: var(--background);
     color: var(--text);
     text-align: center;
   }
 
-
-  p {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 0 auto;
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
+
+  .intro h1 {
+    font-size: 100px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .intro-box {
+    border: 1px solid var(--main-color);
+    padding: 30px 40px;
+    background-color: var(--theme-bg);
+    color: var(--main-color);
+  }
+
 </style>

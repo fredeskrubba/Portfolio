@@ -28,6 +28,8 @@ import ExperienceIcon from '../assets/icons/experience-icon.svg';
 import StackIcon from '../assets/icons/stack-icon.svg';
 import ProjectsIcon from '../assets/icons/projects-icon.svg';
 import Arrow from '../assets/icons/Arrow.svg';
+import RedirectArrow from '../assets/icons/redirect-arrow.svg';
+
 const { data } = Astro.props;
 
 const isExperience = (item: any): item is Experience => 'position' in item;
@@ -78,7 +80,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
   <div class="carousel-window" id="carousel-window">
     {data.map((item) => (
       <div class="carousel-item">
-        {/* TYPE 1: EXPERIENCE */}
+        {/* EXPERIENCE */}
         {isExperience(item) && (
           <div class="experience-card">
             <div class="experience-header">
@@ -93,23 +95,32 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
           </div>
         )}
 
-        {/* TYPE 2: PROJECT */}
-        {isProject(item) && (
-          <div class="project-card">
-            <img src={item.image} alt={item.title} />
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <a href={item.url}>View Project</a>
+        {/* STACK ITEM */}
+        {isStack(item) && (
+          <div class="stack-item">
+               <img src={item.icon} title={item.name} />)
           </div>
         )}
 
-        {/* TYPE 3: STACK ITEM */}
-        {isStack(item) && (
-          <div class="stack-card">
-            <img src={item.icon} alt={item.name} />
-            <span>{item.name}</span>
-          </div>
+        {/* PROJECT */}
+        {isProject(item) && (
+          <a href={item.url} target="_blank" rel="noopener noreferrer">
+            <div class="project-card">
+              <img src={item.image} alt={item.title} />
+              <div>
+                <div class="project-header">
+                  <h3>{item.title}</h3>
+                  <RedirectArrow />
+                </div>
+                <p>{item.description}</p>
+                 <div class="mini-stack">
+                  {item.stack.map(s => <img src={s.icon} title={s.name} />)}
+                </div>
+              </div>
+            </div>
+          </a>
         )}
+
       </div>
     ))}
   </div>
@@ -236,6 +247,17 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
   .mini-stack img {
     width: 50px;
     height: 50px;
+  }
+
+  .project-card {
+    background-color: var(--theme-bg);
+    color: var(--main-color);
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 </style>
 

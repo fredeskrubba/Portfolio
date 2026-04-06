@@ -4,19 +4,27 @@
         "title": "Skrubbanote",
         "description": "Skrubbanote is a note-taking app built with React Native, designed to provide users with a seamless and intuitive experience for organizing their thoughts and ideas on the go.",
         "image": "/assets/images/projects/skrubbanote.png",
-        "url": "https://github.com/fredeskrubba/skrubbanote",
+        "url": "https://www.skrubbanote.site",
         "stack": [
             {
-                "name": "React Native",
-                "icon": "/assets/icons/react-icon.svg"
+                "name": "React",
+                "icon": "src/assets/icons/React.svg"
             },
             {
-                "name": "Expo",
-                "icon": "/assets/icons/expo-icon.svg"
+                "name": "Tailwind",
+                "icon": "src/assets/icons/Tailwind.svg"
             },
             {
-                "name": "Firebase",
-                "icon": "/assets/icons/firebase-icon.svg"
+                "name": "PostgreSQL",
+                "icon": "src/assets/icons/Postgres.svg"
+            },
+            {
+                "name": ".NET",
+                "icon": "src/assets/icons/net.svg"
+            },
+            {
+                "name": "Entity Framework",
+                "icon": "src/assets/icons/entity-framework.svg"
             }
             ]
     }]

@@ -31,6 +31,13 @@
                     "icon": "src/assets/icons/sql-server.svg"
                 }
             ]
+        },
+        {
+            "title": "Aldi Danmark",
+            "position": "Sales assistent",
+            "duration": "April 2020 - September 2020",
+            "description": "I en travl detailhandelsmiljø hos Aldi Danmark, var jeg ansvarlig for at sikre en effektiv og positiv kundeoplevelse. Mine opgaver omfattede kundeservice, hvor jeg assisterede kunder med deres spørgsmål og behov, samt håndtering af kasseapparatet for at sikre hurt",
+            "stack": []
         }
     ]
 }

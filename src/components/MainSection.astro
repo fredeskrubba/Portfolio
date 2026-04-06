@@ -22,13 +22,13 @@ import ProjectsIcon from '../assets/icons/projects-icon.svg';
         </article>
       </div>
       <div class="experience">
-        <CarouselSection data={experience} title="My Experience" />
+        <CarouselSection data={experience} />
       </div>
       <div class="stack">
-        <CarouselSection data={stack} title="My Tech Stack" />
+        <CarouselSection data={stack} />
       </div>
       <div class="projects">
-        <CarouselSection data={projects} title="My Projects" />
+        <CarouselSection data={projects}/>
       </div>
     </section>
 </section>
@@ -41,7 +41,6 @@ import ProjectsIcon from '../assets/icons/projects-icon.svg';
     grid-template-columns: 1fr 3fr;
     background-color: var(--background);
     color: var(--text);
-    text-align: center;
     height: 100%;
     overflow-y: hidden;
   }

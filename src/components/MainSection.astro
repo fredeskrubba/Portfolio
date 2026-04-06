@@ -10,8 +10,8 @@ import ProjectsIcon from '../assets/icons/projects-icon.svg';
 ---
 
 
-<section>
-    <InfoBox />
+<section class="section-container">
+    <InfoBox /> 
     <section class="info-section">
       <div class="intro">
         <h1>Hi I'm Frederik</h1>
@@ -42,12 +42,22 @@ import ProjectsIcon from '../assets/icons/projects-icon.svg';
     background-color: var(--background);
     color: var(--text);
     text-align: center;
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  .section-container {
+    height: 100dvh;
+    margin-bottom: 20px;
   }
 
   .info-section {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    overflow-y: auto;
+    height: 100%;
+    min-height: 0;
   }
 
   .intro h1 {

@@ -36,9 +36,14 @@ const { Title = "Frederik Skrubbeltrang" } = Astro.props;
       box-sizing: border-box;
     }
 
+    :global(html, body) {
+      margin: 0;
+      padding: 0;
+      height: 100dvh;
+    }
     :global(body) {
       margin: 0;
-      min-height: 100vh;
+      overflow-y: auto;
       font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
       background-color: var(--theme-bg);
       background-image:
@@ -51,6 +56,12 @@ const { Title = "Frederik Skrubbeltrang" } = Astro.props;
     h1 {
       font-size: 2rem;
       margin: 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      height: 100dvh;
     }
   </style>
 </html>

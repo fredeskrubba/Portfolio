@@ -3,7 +3,7 @@
     {
         "title": "Skrubbanote",
         "description": "Skrubbanote is a note-taking app built with React Native, designed to provide users with a seamless and intuitive experience for organizing their thoughts and ideas on the go.",
-        "image": "/assets/images/projects/skrubbanote.png",
+        "image": "src/assets/skrubbanote.png",
         "url": "https://www.skrubbanote.site",
         "stack": [
             {

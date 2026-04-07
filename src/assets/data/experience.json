@@ -4,7 +4,12 @@
             "title": "Softnotik aps",
             "position": "Software Developer",
             "duration": "December 2022 - February 2023",
-            "description": "en alt-i-én administrationsplatform til foreningslivet. Arkitektur: Modernisering og vedligeholdelse af platformen med et teknologispænd fra React til Blazor, understøttet af en robust .NET backend. State Management: Implementering af komplekse flows ved hjælp af Redux for at sikre en konsistent brugeroplevelse på tværs af platformens mange moduler. Data & Backend: Design af database-skemaer i SQL Server og effektiv datahåndtering via Entity Framework Core. Fokus: Optimering af essentielle administrative værktøjer, der letter hverdagen for foreningsledere.",
+            "description": "en alt-i-én administrationsplatform til foreningslivet.",
+            "bullets": [
+                "Udvikling og vedligeholdelse af en omfattende administrationsplatform for foreningslivet, der integrerer både React og Blazor frontend-teknologier.",
+                "Implementering af komplekse state management flows ved hjælp af Redux for at sikre en konsistent og effektiv brugeroplevelse.",
+                "Design og optimering af database-skemaer i SQL Server, samt effektiv datahåndtering via Entity Framework Core."
+            ],
             "stack": [
                 {
                     "name": "React",

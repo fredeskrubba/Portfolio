@@ -4,12 +4,12 @@ interface Experience {
   position: string;
   duration: string;
   description: string;
+  bullets?: string[];
   stack: { name: string; icon: string; }[];
 }
 
 interface StackItem {
-  name: string;
-  icon: string;
+ page1: { name: string; icon: string; }[];
 }
 
 interface Project {
@@ -89,6 +89,13 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
             </div>
             <h5>{item.position}</h5>
             <p>{item.description}</p>
+            {
+              item.bullets && (
+                <ul>
+                  {item.bullets.map(b => <li>{b}</li>)}
+                </ul>
+              )
+            }
             <div class="mini-stack">
               {item.stack.map(s => <img src={s.icon} title={s.name} />)}
             </div>
@@ -96,24 +103,30 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
         )}
 
         {/* STACK ITEM */}
-        {isStack(item) && (
-          <div class="stack-item">
-               <img src={item.icon} title={item.name} />)
-          </div>
-        )}
+        
+          
+            
+            {isStack(item) && (
+              <div class="stack-page">
+                {item.page1.map(s => <img src={s.icon} title={s.name} />)}
+              </div>
+            )}  
+        
 
         {/* PROJECT */}
         {isProject(item) && (
           <a href={item.url} target="_blank" rel="noopener noreferrer">
             <div class="project-card">
               <img src={item.image} alt={item.title} />
-              <div>
-                <div class="project-header">
-                  <h3>{item.title}</h3>
-                  <RedirectArrow />
+              <div class="project-info">
+                <div>
+                  <div class="project-header">
+                    <h3>{item.title}</h3>
+                    <RedirectArrow />
+                  </div>
+                  <p>{item.description}</p>
                 </div>
-                <p>{item.description}</p>
-                 <div class="mini-stack">
+                 <div class="project-stack">
                   {item.stack.map(s => <img src={s.icon} title={s.name} />)}
                 </div>
               </div>
@@ -136,7 +149,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     gap: 15px;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--main-color);
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   
   .flex {
@@ -218,6 +231,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     color: var(--main-color);
     padding: 10px;
     border: 1px solid var(--main-color);
+    border-radius: 5px;
   }
 
   .experience-card h3 {
@@ -225,19 +239,26 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     font-size: 34px;
   }
 
-  .experience-card h4 {
+  .experience-card h4, .experience-card h5 {
     font-size: 18px;
     font-weight: 300;
     font-style: italic;
   }
+
   .experience-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    padding-bottom: 10px;
     border-bottom: 1px solid var(--main-color);
+    margin-bottom: 5px;
   }
 
+  ul {
+    margin: 0;
+    padding-left: 20px;
+  }
   .mini-stack {
     display: flex;
     gap: 10px;
@@ -249,15 +270,53 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     height: 50px;
   }
 
+  .stack-page {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
   .project-card {
     background-color: var(--theme-bg);
     color: var(--main-color);
     padding: 10px;
     border: 1px solid var(--main-color);
-    border-radius: 20px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 10px;
+  }
+
+  .project-card img {
+    border-radius: 15px;
+  }
+  .project-info {
+    padding: 10px;
     display: flex;
     flex-direction: column;
+  }
+  .project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .project-header h3 {
+    margin: 0;
+    font-size: 34px;
+  }
+
+  .project-stack {
+    display: flex;
     gap: 10px;
+    margin-top: auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 </style>
 

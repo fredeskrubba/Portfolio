@@ -6,75 +6,75 @@
 
             {
               "name": "HTML",
-              "icon": "src/assets/icons/HTML.svg"
+              "icon": "Html"
             },
             {
               "name": "CSS",
-              "icon": "src/assets/icons/CSS.svg"
+              "icon": "Css"
             },
             {
               "name": "Javascript",
-              "icon": "src/assets/icons/Javascript.svg"
+              "icon": "Javascript"
             },
             {
               "name": "React",
-              "icon": "src/assets/icons/React.svg"
+              "icon": "React"
             },
             {
               "name": "Redux",
-              "icon": "src/assets/icons/Redux.svg"
+              "icon": "Redux"
             },
             {
               "name": "Tailwind",
-              "icon": "src/assets/icons/Tailwind.svg"
+              "icon": "Tailwind"
             },
             {
               "name": "Node.js",
-              "icon": "src/assets/icons/Nodejs.svg"
+              "icon": "Nodejs"
             },
             {
               "name": "C#",
-              "icon": "src/assets/icons/CSharp.svg"
+              "icon": "CSharp"
             },
             {
               "name": "Blazor",
-              "icon": "src/assets/icons/Blazor.svg"
+              "icon": "Blazor"
             },
             {
               "name": ".NET",
-              "icon": "src/assets/icons/net.svg"
+              "icon": "Net"
             },
             {
               "name": "Entity Framework",
-              "icon": "src/assets/icons/entity-framework.svg"
+              "icon": "EntityFramework"
             },
             {
               "name": "MySQL",
-              "icon": "src/assets/icons/MySQL.svg"
+              "icon": "MySql"
             },
             {
               "name": "PostgreSQL",
-              "icon": "src/assets/icons/postgres.svg"
+              "icon": "Postgres"
             },
             {
               "name": "Microsoft SQL Server",
-              "icon": "src/assets/icons/sql-server.svg"
+              "icon": "SqlServer"
             },
             {
               "name": "Git",
-              "icon": "src/assets/icons/Git.svg"
+              "icon": "Git"
             },
             {
               "name": "Docker",
-              "icon": "src/assets/icons/docker.svg"
+              "icon": "Docker"
             },
             {
               "name": "Azure DevOps",
-              "icon": "src/assets/icons/azure-devops.svg"
+              "icon": "AzureDevops"
             },
             {
               "name": "Figma",
-              "icon": "src/assets/icons/figma.svg"
+              "icon": "Figma"
             }
         ]
     }

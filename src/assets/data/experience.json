@@ -13,29 +13,36 @@
             "stack": [
                 {
                     "name": "React",
-                    "icon": "src/assets/icons/React.svg"
+                    "icon": "React"
                 },
                 {
                     "name": "Redux",
-                    "icon": "src/assets/icons/Redux.svg"
+                    "icon": "Redux"
                 },
                 {
                     "name": "Blazor",
-                    "icon": "src/assets/icons/Blazor.svg"
+                    "icon": "Blazor"
                 },
                 {
                     "name": ".NET",
-                    "icon": "src/assets/icons/net.svg"
+                    "icon": "Net"
                 },
                 {
                     "name": "Entity Framework Core",
-                    "icon": "src/assets/icons/entity-framework.svg"
+                    "icon": "EntityFramework"
                 },
                 {
                     "name": "SQL Server",
-                    "icon": "src/assets/icons/sql-server.svg"
+                    "icon": "SqlServer"
                 }
             ]
+        },
+        {
+            "title": "Aldi Danmark",
+            "position": "Sales assistent",
+            "duration": "April 2020 - September 2020",
+            "description": "I en travl detailhandelsmiljø hos Aldi Danmark, var jeg ansvarlig for at sikre en effektiv og positiv kundeoplevelse. Mine opgaver omfattede kundeservice, hvor jeg assisterede kunder med deres spørgsmål og behov, samt håndtering af kasseapparatet for at sikre hurt",
+            "stack": []
         }
     ]
 }

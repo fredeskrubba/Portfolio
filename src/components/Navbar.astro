@@ -1,27 +1,15 @@
 ---
 import EnglishLanguage from "../assets/icons/English-language.svg";
+
+import { Lightmode, Darkmode } from "../assets/data";
 ---
 
 <nav class="navbar">
   <ul class="nav-links">
-    <li class="nav-icons" aria-label="Toggle color theme">
-      <svg
-        class="theme-toggle-svg"
-        width="64"
-        height="64"
-        viewBox="0 0 64 64"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <circle cx="32" cy="32" r="32" />
-        <path
-          d="M24.926 39.076C22.9753 37.1253 22 34.7667 22 32C22 29.2333 22.9753 26.8753 24.926 24.926C26.8767 22.9767 29.2347 22.0013 32 22C34.7653 21.9987 37.124 22.974 39.076 24.926C41.028 26.878 42.0027 29.236 42 32C41.9973 34.764 41.022 37.1227 39.074 39.076C37.126 41.0293 34.768 42.004 32 42C29.232 41.996 26.874 41.0207 24.926 39.074M18 34H10V30H18V34ZM54 34H46V30H54V34ZM30 18V10H34V18H30ZM30 54V46H34V54H30ZM20.8 23.5L15.75 18.65L18.6 15.7L23.4 20.7L20.8 23.5ZM45.4 48.3L40.55 43.25L43.2 40.5L48.25 45.35L45.4 48.3ZM40.5 20.8L45.35 15.75L48.3 18.6L43.3 23.4L40.5 20.8ZM15.7 45.4L20.75 40.55L23.5 43.2L18.65 48.25L15.7 45.4Z"
-        />
-      </svg>
+    <li class="nav-icons theme-toggle" aria-label="Toggle color theme">
+      <Lightmode class="theme-toggle-svg theme-icon theme-icon-light" />
+      <Darkmode class="theme-toggle-svg theme-icon theme-icon-dark" />
     </li>
-    <li class="nav-icons"><img src={EnglishLanguage.src} alt="English language" /></li>
   </ul>
 </nav>
 
@@ -66,6 +54,14 @@ import EnglishLanguage from "../assets/icons/English-language.svg";
     display: block;
   }
 
+  .theme-icon {
+    display: none;
+  }
+
+  .theme-icon.active {
+    display: block;
+  }
+
   .theme-toggle-svg circle {
     fill: var(--theme-toggle-disc);
   }
@@ -80,6 +76,23 @@ import EnglishLanguage from "../assets/icons/English-language.svg";
 </style>
 
 <script>
+  function updateThemeIcon() {
+    const root = document.documentElement;
+    const isLight = root.getAttribute("data-theme") === "light";
+    const lightIcon = document.querySelector(".theme-icon-light");
+    const darkIcon = document.querySelector(".theme-icon-dark");
+
+    if (!lightIcon || !darkIcon) return;
+
+    if (isLight) {
+      lightIcon.classList.remove("active");
+      darkIcon.classList.add("active");
+    } else {
+      lightIcon.classList.add("active");
+      darkIcon.classList.remove("active");
+    }
+  }
+
   function bindThemeToggle() {
     const ul = document.querySelector(".nav-links");
     const firstLi = ul?.querySelector("li:first-child");
@@ -95,7 +108,10 @@ import EnglishLanguage from "../assets/icons/English-language.svg";
         root.setAttribute("data-theme", "light");
         localStorage.setItem("theme", "light");
       }
+      updateThemeIcon();
     });
+
+    updateThemeIcon();
   }
 
   if (document.readyState === "loading") {

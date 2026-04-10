@@ -32,6 +32,15 @@ const { Title = "Frederik Skrubbeltrang" } = Astro.props;
     </main>
   </body>
   <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
     :global(*) {
       box-sizing: border-box;
     }
@@ -51,6 +60,8 @@ const { Title = "Frederik Skrubbeltrang" } = Astro.props;
             linear-gradient(180deg, var(--main-color) 3%, var(--theme-bg) 54%);
       background-repeat: repeat;
       color: var(--theme-text);
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
     }
 
     :global(h1, h2, h3, h4, h5, h6, p) {

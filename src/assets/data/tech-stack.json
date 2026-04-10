@@ -29,8 +29,16 @@
               "icon": "Tailwind"
             },
             {
+              "name": "next.js",
+              "icon": "Nextjs"
+            },
+            {
               "name": "Node.js",
               "icon": "Nodejs"
+            },
+            {
+              "name": "Astro.js",
+              "icon": "Astro"
             },
             {
               "name": "C#",

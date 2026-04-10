@@ -27,6 +27,8 @@ import Redux from '../icons/Redux.svg';
 import SqlServer from '../icons/sql-server.svg';
 import StackIcon from '../icons/stack-icon.svg';
 import Tailwind from '../icons/Tailwind.svg';
+import Nextjs from '../icons/Nextjs.svg';
+import Astro from '../icons/Astro.svg';
 
 export {
   Arrow,
@@ -58,4 +60,6 @@ export {
   SqlServer,
   StackIcon,
   Tailwind,
+  Nextjs,
+  Astro
 };

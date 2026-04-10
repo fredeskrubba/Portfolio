@@ -4,16 +4,13 @@ import { experience } from '../assets/data/experience.json';
 import CarouselSection from '../components/CarouselSection.astro';
 import { stack } from '../assets/data/tech-stack.json';
 import { projects } from '../assets/data/projects.json';
-import ExperienceIcon from '../assets/icons/experience-icon.svg';
-import StackIcon from '../assets/icons/stack-icon.svg';
-import ProjectsIcon from '../assets/icons/projects-icon.svg';
 ---
 
 
 <section class="section-container">
     <InfoBox /> 
     <section class="info-section">
-      <div class="intro">
+      <div class="intro vertical-carousel-item">
         <h1>Hi I'm Frederik</h1>
         <article class="intro-box">
           <p>
@@ -21,14 +18,20 @@ import ProjectsIcon from '../assets/icons/projects-icon.svg';
           </p>
         </article>
       </div>
-      <div class="experience">
-        <CarouselSection data={experience} />
+      <div class="experience vertical-carousel-item ">
+        
+          <CarouselSection data={experience} />
+        
       </div>
-      <div class="stack">
-        <CarouselSection data={stack} />
+      <div class="stack vertical-carousel-item">
+        
+          <CarouselSection data={stack} />
+        
       </div>
-      <div class="projects">
-        <CarouselSection data={projects}/>
+      <div class="projects vertical-carousel-item">
+        
+          <CarouselSection data={projects}/>
+        
       </div>
     </section>
 </section>
@@ -50,19 +53,67 @@ import ProjectsIcon from '../assets/icons/projects-icon.svg';
     margin-bottom: 20px;
   }
 
-  .info-section {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    overflow-y: auto;
-    height: 100%;
-    min-height: 0;
-  }
+ .info-section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  perspective: 1000px; 
+}
+
+.vertical-carousel-item {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+
+  width: 70%;
+  max-width: 800px;
+
+
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0.5;
+  filter: blur(2px);
+
+  transition: all 0.4s ease;
+
+}
+
+
+.vertical-carousel-item.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  filter: none;
+  z-index: 3;
+  border-radius: 15px;
+  background-color: color-mix(in srgb, var(--theme-bg), transparent 40%);
+  padding: 10px;
+}
+
+
+.vertical-carousel-item.prev {
+  transform: translate(-50%, calc(-50% - 180px)) scale(0.85);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+
+.vertical-carousel-item.next {
+  transform: translate(-50%, calc(-50% + 180px)) scale(0.85);
+  opacity: 0.7;
+  z-index: 2;
+}
+
 
   .intro h1 {
     font-size: 100px;
     font-weight: 600;
     margin: 0;
+    color: var(--main-color);
   }
 
   .intro-box {
@@ -72,4 +123,78 @@ import ProjectsIcon from '../assets/icons/projects-icon.svg';
     color: var(--main-color);
   }
 
+  .stack {
+  z-index: 3;
+  transform: translateY(0) scale(1);
+}
+
+
+.experience {
+  z-index: 2;
+  transform: translateY(-160px) scale(0.85) rotateX(15deg);
+  opacity: 0.7;
+  filter: blur(1px);
+}
+
+
+.projects {
+  z-index: 2;
+  transform: translateY(160px) scale(0.85) rotateX(-15deg);
+  opacity: 0.7;
+  filter: blur(1px);
+}
+
+.vertical-carousel-item.hidden {
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0;
+  pointer-events: none;
+}
 </style>
+
+<script>
+  const items = document.querySelectorAll(".vertical-carousel-item");
+
+  let current = 1;
+  let isScrolling = false;
+
+  function updateClasses() {
+    items.forEach((item, index) => {
+      item.classList.remove("active", "prev", "next", "hidden");
+
+      if (index === current) {
+        item.classList.add("active");
+      } 
+      else if (index === current - 1) {
+        item.classList.add("prev");
+      } 
+      else if (index === current + 1) {
+        item.classList.add("next");
+      } 
+      else {
+        item.classList.add("hidden"); // 👈 important
+      }
+    });
+  }
+
+  function handleScroll(e) {
+    if (isScrolling) return;
+
+    isScrolling = true;
+
+    if (e.deltaY > 0) {
+      current = Math.min(current + 1, items.length - 1);
+    } else {
+      current = Math.max(current - 1, 0);
+    }
+
+    updateClasses();
+
+    setTimeout(() => {
+      isScrolling = false;
+    }, 400);
+  }
+
+  window.addEventListener("wheel", handleScroll, { passive: true });
+
+  updateClasses();
+</script>

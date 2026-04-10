@@ -134,7 +134,7 @@ const StackIcons = {}
                  <div class="project-stack">
                   {item.stack.map(s => {
                     const IconComp = Icons[s.icon];
-                    return IconComp ? <IconComp title={s.name} /> : null;
+                    return IconComp ? <IconComp title={Icons[s.name]} class="stack-icon"/> : null;
                   })}
                 </div>
               </div>
@@ -190,7 +190,7 @@ const StackIcons = {}
     grid-row: 1;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    box-sizing: border-box;
+    box-sizing:initial;
     pointer-events: none;
   }
 
@@ -296,6 +296,10 @@ const StackIcons = {}
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
+    background-color: var(--theme-bg);
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
   }
 
   .project-card {
@@ -305,12 +309,17 @@ const StackIcons = {}
     border: 1px solid var(--main-color);
     border-radius: 5px;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 180px 1fr;
     gap: 10px;
+    font-size: 18px;
   }
 
   .project-card img {
     border-radius: 15px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .project-info {
     padding: 10px;
@@ -332,7 +341,7 @@ const StackIcons = {}
   .project-stack {
     display: flex;
     gap: 10px;
-    margin-top: auto;
+    margin-top: 20px;
   }
 
   a {
@@ -342,6 +351,11 @@ const StackIcons = {}
 
   svg {
     fill: var(--theme-bg);
+  }
+
+  .stack-icon {
+    width: 40px;
+    height: 40px;
   }
 </style>
 

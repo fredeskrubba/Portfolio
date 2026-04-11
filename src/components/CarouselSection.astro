@@ -97,7 +97,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
             <div class="mini-stack">
               {item.stack.map(s => {
                 const IconComp = Icons[s.icon];
-                return IconComp ? <IconComp title={s.name} class="mini-stack-icon"/> : null;
+                return IconComp ? <span title={s.name}><IconComp  class="mini-stack-icon"/></span> : null;
               })}
             </div>
           </div>
@@ -111,7 +111,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
               <div class="stack-page">
                 {item.page1.map(s => {
                   const IconComp = Icons[s.icon];
-                  return IconComp ? <IconComp title={s.name} class="tech-stack-icon"/> : null;
+                  return IconComp ? <span title={s.name}><IconComp  class="tech-stack-icon"/></span> : null;
                 })}
               </div>
             )}  
@@ -133,7 +133,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
                  <div class="project-stack">
                   {item.stack.map(s => {
                     const IconComp = Icons[s.icon];
-                    return IconComp ? <IconComp title={Icons[s.name]} class="mini-stack-icon"/> : null;
+                    return IconComp ? <span title={s.name}><IconComp  class="mini-stack-icon"/></span> : null;
                   })}
                 </div>
               </div>

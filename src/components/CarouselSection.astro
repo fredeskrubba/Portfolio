@@ -97,7 +97,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
             <div class="mini-stack">
               {item.stack.map(s => {
                 const IconComp = Icons[s.icon];
-                return IconComp ? <span title={s.name}><IconComp  class="mini-stack-icon"/></span> : null;
+                return IconComp ? <span data-tooltip={s.name}><IconComp class="mini-stack-icon"/></span> : null;
               })}
             </div>
           </div>
@@ -111,7 +111,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
               <div class="stack-page">
                 {item.page1.map(s => {
                   const IconComp = Icons[s.icon];
-                  return IconComp ? <span title={s.name}><IconComp  class="tech-stack-icon"/></span> : null;
+                  return IconComp ? <span data-tooltip={s.name}><IconComp class="tech-stack-icon"/></span> : null;
                 })}
               </div>
             )}  
@@ -133,7 +133,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
                  <div class="project-stack">
                   {item.stack.map(s => {
                     const IconComp = Icons[s.icon];
-                    return IconComp ? <span title={s.name}><IconComp  class="mini-stack-icon"/></span> : null;
+                    return IconComp ? <span data-tooltip={s.name}><IconComp class="mini-stack-icon"/></span> : null;
                   })}
                 </div>
               </div>
@@ -367,9 +367,39 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     height: 40px;
     transition: transform 0.2s ease;
   }
+
+  span[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+  }
+
+  span[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--theme-bg);
+    color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--main-color);
+    white-space: nowrap;
+    z-index: 10;
+    font-size: 12px;
+    font-weight: 500;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+
+  span[data-tooltip]:not(:hover)::after {
+    opacity: 0;
+    pointer-events: none;
+  }
 </style>
 
-<script>
+<script is:client>
   document.querySelectorAll('.carousel-section').forEach(section => {
   const prevBtn = section.querySelector('.nav-btn.prev');
   const nextBtn = section.querySelector('.nav-btn.next');

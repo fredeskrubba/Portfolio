@@ -6,7 +6,7 @@ import MailIcon from '../assets/icons/mail-icon.svg';
 
 <article class="infobox">
     <img src="src/assets/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-    <button type="button" class="cv-button" id="cv-download">Download mit CV</button>
+    <button type="button" class="cv-button" id="cv-download" data-i18n="cvButtonText" />
 
     <div class="link-container">
         <a href="https://github.com/fredeskrubba" target="_blank" rel="noopener noreferrer"><GithubIcon /></a>
@@ -20,7 +20,7 @@ import MailIcon from '../assets/icons/mail-icon.svg';
     
     function downloadCV() {
         const link = document.createElement('a');
-        link.href = 'src/assets/Frederik_Skrubbeltrang_CV.pdf';
+        link.href = 'src/assets/CV.pdf';
         link.download = 'Frederik_Skrubbeltrang_CV.pdf';
         document.body.appendChild(link);
         link.click();

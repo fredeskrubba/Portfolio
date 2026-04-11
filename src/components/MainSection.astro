@@ -34,6 +34,12 @@ import { projects } from '../assets/data/projects.json';
         
       </div>
     </section>
+    <div class="dots">
+      <div class="dot active" data-index="0"></div>
+      <div class="dot" data-index="1"></div>
+      <div class="dot" data-index="2"></div>
+      <div class="dot" data-index="3"></div>
+    </div>
 </section>
 
 
@@ -41,7 +47,7 @@ import { projects } from '../assets/data/projects.json';
   section {
     padding: 0 80px;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 3fr 0.1fr;
     background-color: var(--background);
     color: var(--text);
     height: 100%;
@@ -149,10 +155,40 @@ import { projects } from '../assets/data/projects.json';
   opacity: 0;
   pointer-events: none;
 }
+
+.dots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--theme-bg);
+  border: 1px solid var(--main-color);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.dot.active {
+  opacity: 1;
+  background-color: var(--main-color);
+}
+
+.dot:hover {
+  opacity: 0.8;
+}
 </style>
 
 <script>
   const items = document.querySelectorAll(".vertical-carousel-item");
+  const dots = document.querySelectorAll(".dot");
 
   let current = 0;
   let isScrolling = false;
@@ -174,6 +210,13 @@ import { projects } from '../assets/data/projects.json';
         item.classList.add("hidden"); // 👈 important
       }
     });
+    updateDots();
+  }
+
+  function updateDots() {
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === current);
+    });
   }
 
   function handleScroll(e) {
@@ -193,6 +236,13 @@ import { projects } from '../assets/data/projects.json';
       isScrolling = false;
     }, 400);
   }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      current = index;
+      updateClasses();
+    });
+  });
 
   window.addEventListener("wheel", handleScroll, { passive: true });
 

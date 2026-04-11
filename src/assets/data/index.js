@@ -29,6 +29,7 @@ import StackIcon from '../icons/stack-icon.svg';
 import Tailwind from '../icons/Tailwind.svg';
 import Nextjs from '../icons/Nextjs.svg';
 import Astro from '../icons/Astro.svg';
+import DanishLanguage from '../icons/Danish-language.svg';
 
 export {
   Arrow,
@@ -36,6 +37,7 @@ export {
   Blazor,
   CSharp,
   Css,
+  DanishLanguage,
   Darkmode,
   Docker,
   EnglishLanguage,

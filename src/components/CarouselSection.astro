@@ -46,7 +46,6 @@ if (isExperience(firstItem)) {
 
 const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? ProjectsIcon : StackIcon;
 
-const StackIcons = {}
 ---
 
 <section class="carousel-section" data-count={data.length}>
@@ -98,7 +97,7 @@ const StackIcons = {}
             <div class="mini-stack">
               {item.stack.map(s => {
                 const IconComp = Icons[s.icon];
-                return IconComp ? <IconComp title={s.name} /> : null;
+                return IconComp ? <IconComp title={s.name} class="mini-stack-icon"/> : null;
               })}
             </div>
           </div>
@@ -112,7 +111,7 @@ const StackIcons = {}
               <div class="stack-page">
                 {item.page1.map(s => {
                   const IconComp = Icons[s.icon];
-                  return IconComp ? <IconComp title={s.name} /> : null;
+                  return IconComp ? <IconComp title={s.name} class="tech-stack-icon"/> : null;
                 })}
               </div>
             )}  
@@ -134,7 +133,7 @@ const StackIcons = {}
                  <div class="project-stack">
                   {item.stack.map(s => {
                     const IconComp = Icons[s.icon];
-                    return IconComp ? <IconComp title={Icons[s.name]} class="stack-icon"/> : null;
+                    return IconComp ? <IconComp title={Icons[s.name]} class="mini-stack-icon"/> : null;
                   })}
                 </div>
               </div>
@@ -353,9 +352,20 @@ const StackIcons = {}
     fill: var(--theme-bg);
   }
 
-  .stack-icon {
+  .tech-stack-icon:hover, .mini-stack-icon:hover {
+    transform: translatey(-5px);
+  }
+
+  .tech-stack-icon {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.2s ease;
+  }
+
+  .mini-stack-icon {
     width: 40px;
     height: 40px;
+    transition: transform 0.2s ease;
   }
 </style>
 

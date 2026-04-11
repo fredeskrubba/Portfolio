@@ -1,6 +1,6 @@
 ---
 import EnglishLanguage from "../assets/icons/English-language.svg";
-
+import DanishLanguage from "../assets/icons/Danish-language.svg";
 import { Lightmode, Darkmode } from "../assets/data";
 ---
 
@@ -9,6 +9,9 @@ import { Lightmode, Darkmode } from "../assets/data";
     <li class="nav-icons theme-toggle" aria-label="Toggle color theme">
       <Lightmode class="theme-toggle-svg theme-icon theme-icon-light" />
       <Darkmode class="theme-toggle-svg theme-icon theme-icon-dark" />
+    </li>
+    <li>
+      <DanishLanguage title="Danish" class="lang-toggle"/>
     </li>
   </ul>
 </nav>
@@ -41,14 +44,8 @@ import { Lightmode, Darkmode } from "../assets/data";
     gap: 0.75rem;
   }
 
-  
-  .nav-links img {
-    width: 3rem;
-    height: 3rem;
-    display: block;
-  }
 
-  .theme-toggle-svg {
+  .theme-toggle-svg, .lang-toggle {
     width: 3rem;
     height: 3rem;
     display: block;
@@ -63,14 +60,22 @@ import { Lightmode, Darkmode } from "../assets/data";
   }
 
   .theme-toggle-svg circle {
-    fill: var(--theme-toggle-disc);
+    fill: var(--theme-bg);
   }
 
   .theme-toggle-svg path {
-    fill: var(--theme-toggle-icon);
+    fill: var(--theme-bg);
   }
 
   .nav-links > li:first-child {
+    cursor: pointer;
+  }
+
+  .lang-toggle {
+    fill: var(--theme-bg);
+
+  }
+  .lang-toggle:hover {
     cursor: pointer;
   }
 </style>

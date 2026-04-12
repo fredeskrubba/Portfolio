@@ -17,17 +17,19 @@ interface Project {
   description: string;
   image: string;
   url: string;
-  stack: StackItem[];
+  stack: { name: string; icon: string; }[];
 }
 
 interface Props {
   data: Project[] | Experience[] | StackItem[];
+  lang?: string;
 }
 
 import { ExperienceIcon, StackIcon, ProjectsIcon, Arrow, RedirectArrow } from '../assets/data';
 import * as Icons from '../assets/data';
 
 const { data } = Astro.props;
+
 
 const isExperience = (item: any): item is Experience => 'position' in item;
 const isProject = (item: any): item is Project => 'url' in item;
@@ -45,7 +47,6 @@ if (isExperience(firstItem)) {
 }
 
 const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? ProjectsIcon : StackIcon;
-
 ---
 
 <section class="carousel-section" data-count={data.length}>
@@ -311,6 +312,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     grid-template-columns: 180px 1fr;
     gap: 10px;
     font-size: 18px;
+    transition: all 0.2s ease-in-out;
   }
 
   .project-card img {
@@ -399,7 +401,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
   }
 </style>
 
-<script is:client>
+<script>
   document.querySelectorAll('.carousel-section').forEach(section => {
   const prevBtn = section.querySelector('.nav-btn.prev');
   const nextBtn = section.querySelector('.nav-btn.next');

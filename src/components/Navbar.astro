@@ -1,5 +1,4 @@
 ---
-import EnglishLanguage from "../assets/icons/English-language.svg";
 import DanishLanguage from "../assets/icons/Danish-language.svg";
 import { Lightmode, Darkmode } from "../assets/data";
 ---
@@ -11,8 +10,7 @@ import { Lightmode, Darkmode } from "../assets/data";
       <Darkmode class="theme-toggle-svg theme-icon theme-icon-dark" />
     </li>
     <li>
-      <DanishLanguage class="lang-toggle danish-icon"/>
-      <EnglishLanguage class="lang-toggle english-icon"/>
+      <DanishLanguage />
     </li>
   </ul>
 </nav>
@@ -60,14 +58,6 @@ import { Lightmode, Darkmode } from "../assets/data";
     display: block;
   }
 
-  .lang-toggle {
-    display: none;
-  }
-
-  .lang-toggle.active {
-    display: block;
-  }
-
   .theme-toggle-svg circle {
     fill: var(--theme-bg);
   }
@@ -80,24 +70,10 @@ import { Lightmode, Darkmode } from "../assets/data";
     cursor: pointer;
   }
 
-  .lang-toggle {
-    fill: var(--theme-bg);
-
-  }
-  .lang-toggle:hover {
-    cursor: pointer;
-  }
 </style>
 
 <script >
-
-  import { translations } from "../assets/data/translations.js";
-
-  const englishIcon = document.querySelector(".english-icon");
-  const danishIcon = document.querySelector(".danish-icon");
-  let currentLang = localStorage.getItem("lang") || "en";
-
-
+ 
   function updateThemeIcon() {
     const root = document.documentElement;
     const isLight = root.getAttribute("data-theme") === "light";
@@ -116,26 +92,6 @@ import { Lightmode, Darkmode } from "../assets/data";
     }
   }
 
-  function applyTranslations(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      el.textContent = translations[lang][key];
-    });
-
-    updateLanguageIcon();
-  }
-
-  function updateLanguageIcon() {
-    
-    
-    if (currentLang === "da") {
-      danishIcon.classList.remove("active");
-      englishIcon.classList.add("active");
-    } else {
-      danishIcon.classList.add("active");
-      englishIcon.classList.remove("active");
-    }
-  }
 
   function bindThemeToggle() {
     const ul = document.querySelector(".nav-links");
@@ -167,19 +123,5 @@ import { Lightmode, Darkmode } from "../assets/data";
   } else {
     bindThemeToggle();
   }
-
-  applyTranslations(currentLang);
-
-  englishIcon.addEventListener("click", () => {
-    currentLang = "en";
-    localStorage.setItem("lang", currentLang);
-    applyTranslations(currentLang);
-  });
-
-  danishIcon.addEventListener("click", () => {
-    currentLang = "da";
-    localStorage.setItem("lang", currentLang);
-    applyTranslations(currentLang);
-  });
   
 </script>

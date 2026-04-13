@@ -72,7 +72,15 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
           <Arrow style="transform: rotate(180deg);" />
         </button>
       </div>
-        
+      <div class="carousel-controls-mobile">
+        <button class="nav-btn-mobile prev" aria-label="Previous">
+          <Arrow />
+        </button>
+
+        <button class="nav-btn-mobile next" aria-label="Next">
+          <Arrow style="transform: rotate(180deg);" />
+        </button>
+      </div>
       )
     }
   </article>
@@ -205,6 +213,10 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     justify-content: center;
     gap: 20px;
     margin-top: 1rem;
+  }
+
+  .carousel-controls-mobile {
+    display: none;
   }
 
   .nav-btn {
@@ -422,6 +434,26 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     font-style: italic;
   }
 
+  .carousel-controls-mobile {
+    display: flex;
+    gap: 10px;
+  }
+
+  .nav-btn-mobile {
+    background: var(--theme-bg);
+    border: 1px solid var(--main-color);
+    color: var(--theme-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 25px;    
+    height: 25px;
+    border-radius: 50%;
+  }
+  .carousel-controls {
+    display: none;
+  }
   ul {
     margin: 0;
     font-size: 10px;
@@ -459,6 +491,8 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
   document.querySelectorAll('.carousel-section').forEach(section => {
   const prevBtn = section.querySelector('.nav-btn.prev');
   const nextBtn = section.querySelector('.nav-btn.next');
+  const prevBtnMobile = section.querySelector('.nav-btn-mobile.prev');
+  const nextBtnMobile = section.querySelector('.nav-btn-mobile.next');
   const dots = section.querySelectorAll('.slider-dot');
   const items = section.querySelectorAll('.carousel-item');
 
@@ -481,6 +515,8 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
 
   prevBtn?.addEventListener('click', () => showSlide(currentIndex - 1));
   nextBtn?.addEventListener('click', () => showSlide(currentIndex + 1));
+  prevBtnMobile?.addEventListener('click', () => showSlide(currentIndex - 1));
+  nextBtnMobile?.addEventListener('click', () => showSlide(currentIndex + 1));
 
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => showSlide(i));

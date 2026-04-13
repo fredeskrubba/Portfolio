@@ -64,7 +64,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
   
         <div class="dots-wrapper">
           {data.map((_, i) => (
-            <span class={`dot ${i === 0 ? 'active' : ''}`} data-index={i}></span>
+            <span class={`slider-dot ${i === 0 ? 'active' : ''}`} data-index={i}></span>
           ))}
         </div>
   
@@ -228,7 +228,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     gap: 8px;
   }
 
-  .dot {
+  .slider-dot {
     width: 12px;
     height: 12px;
     background: #ccc;
@@ -238,11 +238,11 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     background: var(--theme-bg);
   }
 
-  .dot:hover {
+  .slider-dot:hover {
     cursor: pointer;
   }
 
-  .dot.active {
+  .slider-dot.active {
     background: var(--main-color);
     transform: scale(1.3);
   }
@@ -459,7 +459,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
   document.querySelectorAll('.carousel-section').forEach(section => {
   const prevBtn = section.querySelector('.nav-btn.prev');
   const nextBtn = section.querySelector('.nav-btn.next');
-  const dots = section.querySelectorAll('.dot');
+  const dots = section.querySelectorAll('.slider-dot');
   const items = section.querySelectorAll('.carousel-item');
 
   let currentIndex = 0;

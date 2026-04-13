@@ -127,7 +127,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
                 <div>
                   <div class="project-header">
                     <h3>{item.title}</h3>
-                    <RedirectArrow class="redirect-arrow"/>
+                    <RedirectArrow />
                   </div>
                   <p>{item.description}</p>
                 </div>
@@ -284,7 +284,6 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     display: flex;
     gap: 10px;
     margin-top: 15px;
-    flex-wrap: wrap;
   }
 
   .stack-page {
@@ -339,7 +338,6 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     display: flex;
     gap: 10px;
     margin-top: 20px;
-    flex-wrap: wrap;
   }
 
   a {
@@ -430,23 +428,9 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     display: flex;
     gap: 10px;
     margin-top: 15px;
-    flex-wrap: wrap;
-    width: 100%;
+    max-width: 20px;
   }
 
-  .stack-page {
-    justify-content: space-between;
-  }
-
-  .project-card {
-    grid-template-columns: 1fr;
-  }
-
-  .redirect-arrow {
-    display: none;
-  }
-
-  
 }
 
 

@@ -11,9 +11,9 @@ import { projects } from '../assets/data/projects.json';
     <InfoBox /> 
     <section class="info-section">
       <div class="intro vertical-carousel-item">
-        <h1>John Doe</h1>
+        <h1>Hey, I'm Frederik!</h1>
         <article class="intro-box">
-          <p>Hello, I'm John Doe, a passionate developer.</p>
+          <p>I’m a full-stack web developer focused on building clean, efficient, and user-friendly applications. I work with React and Tailwind on the frontend and .NET on the backend, combining strong UI development with reliable, scalable systems. I enjoy solving problems and creating solutions that deliver real value.</p>
         </article>
       </div>
       <div class="experience vertical-carousel-item ">
@@ -50,11 +50,13 @@ import { projects } from '../assets/data/projects.json';
     color: var(--text);
     height: 100%;
     overflow-y: hidden;
+    align-items: flex-start;
   }
 
   .section-container {
     height: 100dvh;
     margin-bottom: 20px;
+
   }
 
  .info-section {
@@ -161,6 +163,7 @@ import { projects } from '../assets/data/projects.json';
   align-items: center;
   gap: 10px;
   padding-right: 20px;
+  align-self: center;
 }
 
 .dot {
@@ -183,6 +186,87 @@ import { projects } from '../assets/data/projects.json';
   opacity: 0.8;
 }
 </style>
+
+<style>
+
+@media (max-width: 1024px) {
+
+  .intro h1 {
+    font-size: 60px;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+    color: var(--main-color);
+  }
+
+  section {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    overflow-y: auto;
+    align-items: center;
+  }
+
+  .section-container {
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .info-section {
+    display: block;
+    position: static;
+    height: auto;
+    width: 100%;
+    overflow: visible;
+    perspective: none;
+  }
+
+  .vertical-carousel-item {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: none;
+    transform: none;
+    opacity: 1;
+    filter: none;
+    transition: none;
+    margin-bottom: 20px;
+  }
+
+  .vertical-carousel-item.active,
+  .vertical-carousel-item.prev,
+  .vertical-carousel-item.next,
+  .vertical-carousel-item.hidden {
+    transform: none;
+    opacity: 1;
+    filter: none;
+    z-index: auto;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .dots {
+    display: none;
+  }
+}
+</style>
+
+<style>
+  @media (max-width: 768px) {
+    .intro h1 {
+      font-size: 60px;
+    }
+
+    .intro-box {
+      padding: 10px 20px;
+    }
+
+  }
+
+</style>
+
 
 <script>
   const items = document.querySelectorAll(".vertical-carousel-item");

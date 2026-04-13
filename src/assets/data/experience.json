@@ -2,128 +2,35 @@
     "experience": [
         {
             "title": "Softnotik aps",
-            "position": "Software Developer",
-            "duration": "December 2022 - February 2023",
-            "description": "Working on MinForening, a comprehensive administration platform for associations, utilizing React and Blazor for frontend development, and .NET with Entity Framework Core for backend services.",
+            "position": {
+                "en": "Software Developer",
+                "da": "Softwareudvikler"
+            },
+            "duration": {
+                "en": "December 2022 - February 2026",
+                "da": "December 2022 - Februar 2026"
+            },
+            "description": {
+                "en": "Working on MinForening, a comprehensive administration platform for associations, utilizing React and Blazor for frontend development, and .NET with Entity Framework Core for backend services.",
+                "da": "Arbejder på MinForening, en omfattende administrationsplatform for foreninger, med brug af React og Blazor til frontend-udvikling samt .NET og Entity Framework Core til backend-services."
+            },
             "bullets": [
-                "Developed and maintained features for MinForening, enhancing user experience and functionality.",
-                "Collaborated with a team of developers to implement new modules and optimize existing codebase.",
-                "Utilized React and Blazor to create responsive and interactive user interfaces.",
-                "Implemented backend services using .NET and Entity Framework Core, ensuring efficient data management and performance."
-            ],
-            "stack": [
                 {
-                    "name": "React",
-                    "icon": "React"
+                "en": "Developed and maintained features for MinForening, enhancing user experience and functionality.",
+                "da": "Udviklede og vedligeholdt funktioner til MinForening, hvilket forbedrede brugeroplevelsen og funktionaliteten."
                 },
                 {
-                    "name": "Redux",
-                    "icon": "Redux"
+                "en": "Collaborated with a team of developers to implement new modules and optimize existing codebase.",
+                "da": "Samarbejdede med et team af udviklere om at implementere nye moduler og optimere den eksisterende kodebase."
                 },
                 {
-                    "name": "Blazor",
-                    "icon": "Blazor"
+                "en": "Utilized React and Blazor to create responsive and interactive user interfaces.",
+                "da": "Anvendte React og Blazor til at skabe responsive og interaktive brugergrænseflader."
                 },
                 {
-                    "name": ".NET",
-                    "icon": "Net"
-                },
-                {
-                    "name": "Entity Framework Core",
-                    "icon": "EntityFramework"
-                },
-                {
-                    "name": "SQL Server",
-                    "icon": "SqlServer"
+                "en": "Implemented backend services using .NET and Entity Framework Core, ensuring efficient data management and performance.",
+                "da": "Implementerede backend-services med .NET og Entity Framework Core, hvilket sikrede effektiv databehandling og performance."
                 }
-            ]
-        },
-        {
-            "title": "Softnotik aps 2",
-            "position": "Software Developer",
-            "duration": "December 2022 - February 2023",
-            "description": "Working on MinForening, a comprehensive administration platform for associations, utilizing React and Blazor for frontend development, and .NET with Entity Framework Core for backend services.",
-            "bullets": [
-                "Developed and maintained features for MinForening, enhancing user experience and functionality.",
-                "Collaborated with a team of developers to implement new modules and optimize existing codebase.",
-                "Utilized React and Blazor to create responsive and interactive user interfaces.",
-                "Implemented backend services using .NET and Entity Framework Core, ensuring efficient data management and performance."
-            ],
-            "stack": [
-                {
-                    "name": "React",
-                    "icon": "React"
-                },
-                {
-                    "name": "Redux",
-                    "icon": "Redux"
-                },
-                {
-                    "name": "Blazor",
-                    "icon": "Blazor"
-                },
-                {
-                    "name": ".NET",
-                    "icon": "Net"
-                },
-                {
-                    "name": "Entity Framework Core",
-                    "icon": "EntityFramework"
-                },
-                {
-                    "name": "SQL Server",
-                    "icon": "SqlServer"
-                }
-            ]
-        },
-        {
-            "title": "Softnotik aps 3",
-            "position": "Software Developer",
-            "duration": "December 2022 - February 2023",
-            "description": "Working on MinForening, a comprehensive administration platform for associations, utilizing React and Blazor for frontend development, and .NET with Entity Framework Core for backend services.",
-            "bullets": [
-                "Developed and maintained features for MinForening, enhancing user experience and functionality.",
-                "Collaborated with a team of developers to implement new modules and optimize existing codebase.",
-                "Utilized React and Blazor to create responsive and interactive user interfaces.",
-                "Implemented backend services using .NET and Entity Framework Core, ensuring efficient data management and performance."
-            ],
-            "stack": [
-                {
-                    "name": "React",
-                    "icon": "React"
-                },
-                {
-                    "name": "Redux",
-                    "icon": "Redux"
-                },
-                {
-                    "name": "Blazor",
-                    "icon": "Blazor"
-                },
-                {
-                    "name": ".NET",
-                    "icon": "Net"
-                },
-                {
-                    "name": "Entity Framework Core",
-                    "icon": "EntityFramework"
-                },
-                {
-                    "name": "SQL Server",
-                    "icon": "SqlServer"
-                }
-            ]
-        },
-        {
-            "title": "Softnotik aps 4",
-            "position": "Software Developer",
-            "duration": "December 2022 - February 2023",
-            "description": "Working on MinForening, a comprehensive administration platform for associations, utilizing React and Blazor for frontend development, and .NET with Entity Framework Core for backend services.",
-            "bullets": [
-                "Developed and maintained features for MinForening, enhancing user experience and functionality.",
-                "Collaborated with a team of developers to implement new modules and optimize existing codebase.",
-                "Utilized React and Blazor to create responsive and interactive user interfaces.",
-                "Implemented backend services using .NET and Entity Framework Core, ensuring efficient data management and performance."
             ],
             "stack": [
                 {

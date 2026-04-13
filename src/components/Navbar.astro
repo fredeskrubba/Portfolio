@@ -1,6 +1,10 @@
 ---
 import DanishLanguage from "../assets/icons/Danish-language.svg";
+import { EnglishLanguage } from "../assets/data";
 import { Lightmode, Darkmode } from "../assets/data";
+
+const lang = Astro.url.pathname.startsWith('/da') ? 'da' : 'en';
+
 ---
 
 <nav class="navbar">
@@ -9,8 +13,9 @@ import { Lightmode, Darkmode } from "../assets/data";
       <Lightmode class="theme-toggle-svg theme-icon theme-icon-light" />
       <Darkmode class="theme-toggle-svg theme-icon theme-icon-dark" />
     </li>
-    <li>
-      <DanishLanguage />
+    <li class="lang-icons">
+      { lang === 'da' &&  <EnglishLanguage id="toggle-english" />}
+      { lang === 'en' && <DanishLanguage id="toggle-danish" /> }
     </li>
   </ul>
 </nav>
@@ -44,7 +49,7 @@ import { Lightmode, Darkmode } from "../assets/data";
   }
 
 
-  .theme-toggle-svg, .lang-toggle {
+  .theme-toggle-svg {
     width: 3rem;
     height: 3rem;
     display: block;
@@ -68,6 +73,12 @@ import { Lightmode, Darkmode } from "../assets/data";
 
   .nav-links > li:first-child {
     cursor: pointer;
+  }
+
+  .lang-icons svg {
+    fill: var(--theme-bg);
+    height: 3rem;
+    width: 3rem;
   }
 
 </style>
@@ -134,6 +145,24 @@ import { Lightmode, Darkmode } from "../assets/data";
     });
   } else {
     bindThemeToggle();
-  }
+  } 
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const daBtn = document.getElementById('toggle-danish');
+    const enBtn = document.getElementById('toggle-english');
+
+    daBtn && daBtn.addEventListener('click', () => {
+      let newPath = "/da"; 
+
+      window.location.pathname = newPath;
+    });
+
+    enBtn && enBtn.addEventListener('click', () => {
+      let newPath = "/en"; 
+
+      window.location.pathname = newPath;
+    });
+
+  });
   
 </script>

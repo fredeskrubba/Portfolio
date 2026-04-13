@@ -4,6 +4,11 @@ import { experience } from '../assets/data/experience.json';
 import CarouselSection from '../components/CarouselSection.astro';
 import { stack } from '../assets/data/tech-stack.json';
 import { projects } from '../assets/data/projects.json';
+import en from '../assets/translations/en.json';
+import da from '../assets/translations/da.json';
+
+const lang = Astro.url.pathname.startsWith('/da') ? 'da' : 'en';
+const t = lang === 'da' ? da : en;
 ---
 
 
@@ -11,9 +16,9 @@ import { projects } from '../assets/data/projects.json';
     <InfoBox /> 
     <section class="info-section">
       <div class="intro vertical-carousel-item">
-        <h1>Hey, I'm Frederik!</h1>
+        <h1>{t['intro-title']}</h1>
         <article class="intro-box">
-          <p>I’m a full-stack web developer focused on building clean, efficient, and user-friendly applications. I work with React and Tailwind on the frontend and .NET on the backend, combining strong UI development with reliable, scalable systems. I enjoy solving problems and creating solutions that deliver real value.</p>
+          <p>{t['intro-paragraph']}</p>
         </article>
       </div>
       <div class="experience vertical-carousel-item ">
@@ -76,10 +81,9 @@ import { projects } from '../assets/data/projects.json';
   position: absolute;
   top: 40%;
   left: 50%;
-
-  width: 70%;
-  max-width: 800px;
-
+  width: 100%;
+  max-width: 1200px;
+  
 
   transform: translate(-50%, -50%) scale(0.8);
   opacity: 0.5;
@@ -105,6 +109,7 @@ import { projects } from '../assets/data/projects.json';
   transform: translate(-50%, calc(-50% - 180px)) scale(0.85);
   opacity: 0.7;
   z-index: 2;
+  pointer-events: none;
 }
 
 
@@ -112,11 +117,12 @@ import { projects } from '../assets/data/projects.json';
   transform: translate(-50%, calc(-50% + 180px)) scale(0.85);
   opacity: 0.7;
   z-index: 2;
+  pointer-events: none;
 }
 
 
   .intro h1 {
-    font-size: 100px;
+    font-size: 90px;
     font-weight: 600;
     margin: 0;
     color: var(--main-color);

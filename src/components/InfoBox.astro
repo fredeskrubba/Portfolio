@@ -2,11 +2,17 @@
 import GithubIcon from '../assets/icons/github-icon.svg';
 import LinkedinIcon from '../assets/icons/linkedin-icon.svg';
 import MailIcon from '../assets/icons/mail-icon.svg';
+
+import en from '../assets/translations/en.json';
+import da from '../assets/translations/da.json';
+
+const lang = Astro.url.pathname.startsWith('/da') ? 'da' : 'en';
+const t = lang === 'da' ? da : en;
 ---
 
 <article class="infobox">
     <img src="src/assets/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-    <button type="button" class="cv-button" id="cv-download" >Download My CV</button>
+    <button type="button" class="cv-button" id="cv-download" >{t['resume-button']}</button>
 
     <div class="link-container">
         <a href="https://github.com/fredeskrubba" target="_blank" rel="noopener noreferrer"><GithubIcon /></a>

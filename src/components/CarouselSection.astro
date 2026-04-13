@@ -1,10 +1,10 @@
 ---
 interface Experience {
   title: string;
-  position: string;
-  duration: string;
-  description: string;
-  bullets?: string[];
+  position: { en: string; da: string };
+  duration: { en: string; da: string };
+  description: { en: string; da: string };
+  bullets?: { en: string; da: string }[];
   stack: { name: string; icon: string; }[];
 }
 
@@ -14,7 +14,7 @@ interface StackItem {
 
 interface Project {
   title: string;
-  description: string;
+  description: { en: string; da: string };
   image: string;
   url: string;
   stack: { name: string; icon: string; }[];
@@ -28,6 +28,8 @@ interface Props {
 import { ExperienceIcon, StackIcon, ProjectsIcon, Arrow, RedirectArrow } from '../assets/data';
 import * as Icons from '../assets/data';
 
+
+const lang = Astro.url.pathname.startsWith('/da') ? 'da' : 'en';
 const { data } = Astro.props;
 
 
@@ -89,17 +91,17 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
       <div class="carousel-item">
         {/* EXPERIENCE */}
         {isExperience(item) && (
-          <div class="experience-card">
+          <div class="experience-card card">
             <div class="experience-header">
               <h3>{item.title}</h3>
-              <h4>{item.duration}</h4>
+              <h4>{item.duration[lang]}</h4>
             </div>
-            <h5>{item.position}</h5>
-            <p>{item.description}</p>
+            <h5>{item.position[lang]}</h5>
+            <p>{item.description[lang]}</p>
             {
               item.bullets && (
                 <ul>
-                  {item.bullets.map(b => <li>{b}</li>)}
+                  {item.bullets.map(b => <li>{b[lang]}</li>)}
                 </ul>
               )
             }
@@ -117,7 +119,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
           
             
             {isStack(item) && (
-              <div class="stack-page">
+              <div class="stack-page card">
                 {item.page1.map(s => {
                   const IconComp = Icons[s.icon];
                   return IconComp ? <span data-tooltip={s.name}><IconComp class="tech-stack-icon"/></span> : null;
@@ -129,15 +131,17 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
         {/* PROJECT */}
         {isProject(item) && (
           <a href={item.url} target="_blank" rel="noopener noreferrer">
-            <div class="project-card">
-              <img src={item.image} alt={item.title} />
+            <div class="project-card card">
+              <div style={`background-image: url(${item.image});`} class="project-image">
+                <img src={item.image} alt={item.title} />
+              </div>
               <div class="project-info">
                 <div>
                   <div class="project-header">
                     <h3>{item.title}</h3>
                     <RedirectArrow class="redirect-arrow"/>
                   </div>
-                  <p>{item.description}</p>
+                  <p>{item.description[lang]}</p>
                 </div>
                  <div class="project-stack">
                   {item.stack.map(s => {
@@ -180,7 +184,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     margin: 0;
     color: var(--main-color);
   }
-
+  
   .carousel-container {
     width: 100%;
     max-width: 600px;
@@ -259,12 +263,18 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     transform: scale(1.3);
   }
 
+  .card {
+    min-height: 400px;
+
+  }
   .experience-card {
     background-color: var(--theme-bg);
     color: var(--main-color);
     padding: 10px;
     border: 1px solid var(--main-color);
     border-radius: 5px;
+    flex-direction: column;
+    display: flex;
   }
 
   .experience-card h3 {
@@ -292,22 +302,23 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     margin: 0;
     padding-left: 20px;
   }
+
   .mini-stack {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: auto;
     flex-wrap: wrap;
   }
 
   .stack-page {
     display: flex;
     gap: 10px;
-    align-items: center;
     flex-wrap: wrap;
     background-color: var(--theme-bg);
     padding: 10px;
     border: 1px solid var(--main-color);
     border-radius: 5px;
+    align-content: flex-start;
   }
 
   .project-card {
@@ -317,10 +328,11 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     border: 1px solid var(--main-color);
     border-radius: 5px;
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 300px 1fr;
     gap: 10px;
     font-size: 18px;
     transition: all 0.2s ease-in-out;
+    height: 100%;
   }
 
   .project-card img {
@@ -328,7 +340,8 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+
   }
   .project-info {
     padding: 10px;
@@ -350,8 +363,36 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
   .project-stack {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: auto;
     flex-wrap: wrap;
+  }
+
+  .project-image {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  }
+
+  
+  .project-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    transform: scale(1.1); 
+    z-index: 0;
+  }
+
+  .project-image > * {
+    position: relative;
+    z-index: 1;
   }
 
   a {

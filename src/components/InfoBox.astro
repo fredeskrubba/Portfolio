@@ -5,13 +5,14 @@ import MailIcon from '../assets/icons/mail-icon.svg';
 
 import en from '../assets/translations/en.json';
 import da from '../assets/translations/da.json';
+import ProfilePic from '../assets/profile-pic.jpg';
 
 const lang = Astro.url.pathname.startsWith('/da') ? 'da' : 'en';
 const t = lang === 'da' ? da : en;
 ---
 
 <article class="infobox">
-    <img src="src/assets/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+    <img src={ProfilePic.src} alt="Profile Picture" class="profile-pic">
     <button type="button" class="cv-button" id="cv-download" >{t['resume-button']}</button>
 
     <div class="link-container">

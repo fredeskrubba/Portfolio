@@ -6,7 +6,7 @@
             "en": "Skrubbanote is a note-taking app built with React and Tailwind, designed to provide users with a seamless and intuitive experience for organizing their thoughts and ideas on the go.",
             "da": "Skrubbanote er en note-app bygget med React og Tailwind, designet til at give brugerne en nem og intuitiv måde at organisere deres tanker og idéer på farten."
         },
-        "image": "src/assets/skrubbanote.png",
+        "image": "skrubbanote.png",
         "url": "https://www.skrubbanote.site",
         "stack": [
             {

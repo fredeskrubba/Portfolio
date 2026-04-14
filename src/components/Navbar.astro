@@ -4,18 +4,17 @@ import { EnglishLanguage } from "../assets/data";
 import { Lightmode, Darkmode } from "../assets/data";
 
 const lang = Astro.url.pathname.startsWith('/da') ? 'da' : 'en';
-
 ---
 
 <nav class="navbar">
   <ul class="nav-links">
     <li class="nav-icons theme-toggle" aria-label="Toggle color theme">
-      <Lightmode class="theme-toggle-svg theme-icon theme-icon-light" />
-      <Darkmode class="theme-toggle-svg theme-icon theme-icon-dark" />
+      <span class="icon-wrapper"><Lightmode class="theme-toggle-svg theme-icon theme-icon-light" /></span>
+      <span class="icon-wrapper"><Darkmode class="theme-toggle-svg theme-icon theme-icon-dark" /></span>
     </li>
     <li class="lang-icons">
-      { lang === 'da' &&  <EnglishLanguage id="toggle-english" />}
-      { lang === 'en' && <DanishLanguage id="toggle-danish" /> }
+      { lang === 'da' &&  <span class="icon-wrapper"><EnglishLanguage id="toggle-english" /></span>}
+      { lang === 'en' && <span class="icon-wrapper"><DanishLanguage id="toggle-danish" /></span> }
     </li>
   </ul>
 </nav>
@@ -53,6 +52,7 @@ const lang = Astro.url.pathname.startsWith('/da') ? 'da' : 'en';
     width: 3rem;
     height: 3rem;
     display: block;
+    fill: var(--theme-bg);
   }
 
   .theme-icon {
@@ -80,6 +80,22 @@ const lang = Astro.url.pathname.startsWith('/da') ? 'da' : 'en';
     height: 3rem;
     width: 3rem;
   }
+
+  .icon-wrapper {
+  display: inline-flex;
+  border-radius: 50%;
+  padding: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.icon-wrapper:hover {
+  background-color: var(--hover-light);
+}
+
+.icon-wrapper:hover > svg {
+  fill: var(--hover-light);
+}
 
 </style>
 

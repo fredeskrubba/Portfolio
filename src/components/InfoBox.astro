@@ -18,7 +18,7 @@ const t = lang === 'da' ? da : en;
     <div class="link-container">
         <a href="https://github.com/fredeskrubba" target="_blank" rel="noopener noreferrer"><GithubIcon /></a>
         <a href="https://www.linkedin.com/in/frederik-skrubbeltrang-698b4a1a3/" target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a>
-        <a href="mailto:frederik.skrubbeltrang@proton.me" target="_blank" rel="noopener noreferrer"><MailIcon /></a>
+        <a href="mailto:frederikskrubbeltrang@proton.me" target="_blank" rel="noopener noreferrer"><MailIcon /></a>
     </div>
 </article>
 
@@ -107,7 +107,8 @@ const t = lang === 'da' ? da : en;
             width: 100%;
             margin: 0 50px;
             padding: 20px 30px;
-             justify-self: flex-start;
+            justify-self: flex-start;
+            order: 2;
         }
         .profile-pic {
             height: 250px;
@@ -120,7 +121,7 @@ const t = lang === 'da' ? da : en;
        
         .link-container {
             height: 60px;
-            justify-content: flex-end;
+            justify-content: space-evenly;
             gap: 10px;
         }
 
@@ -130,5 +131,7 @@ const t = lang === 'da' ? da : en;
         }
 
      }
+
+
 
 </style>

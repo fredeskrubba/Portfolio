@@ -27,9 +27,11 @@ interface Props {
 
 import { ExperienceIcon, StackIcon, ProjectsIcon, Arrow, RedirectArrow } from '../assets/data';
 import * as Icons from '../assets/data';
-
+import en from '../assets/translations/en.json';
+import da from '../assets/translations/da.json';
 
 const lang = Astro.url.pathname.startsWith('/da') ? 'da' : 'en';
+const t = lang === 'da' ? da : en;
 const { data } = Astro.props;
 
 
@@ -41,11 +43,11 @@ let sectionTitle = "";
 const firstItem = data[0];
 
 if (isExperience(firstItem)) {
-  sectionTitle = "My Experience";
+  sectionTitle = t['experience-title'];
 } else if (isProject(firstItem)) {
-  sectionTitle = "My Projects";
+  sectionTitle = t['projects-title'];
 } else if (isStack(firstItem)) {
-  sectionTitle = "My Tech Stack";
+  sectionTitle = t['stack-title'];
 }
 
 const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? ProjectsIcon : StackIcon;

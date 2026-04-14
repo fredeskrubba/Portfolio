@@ -12,7 +12,7 @@
             },
             "description": {
                 "en": "Working on MinForening, a comprehensive administration platform for associations, utilizing React and Blazor for frontend development, and .NET with Entity Framework Core for backend services.",
-                "da": "Arbejder på MinForening, en omfattende administrationsplatform for foreninger, med brug af React og Blazor til frontend-udvikling samt .NET og Entity Framework Core til backend-services."
+                "da": "Udvikling på MinForening, en administrationsplatform for foreninger, med brug af React og Blazor til frontend-udvikling samt .NET og Entity Framework Core til backend-services."
             },
             "bullets": [
                 {

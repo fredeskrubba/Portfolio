@@ -102,7 +102,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
             <p>{item.description[lang]}</p>
             {
               item.bullets && (
-                <ul>
+                <ul class="bullets">
                   {item.bullets.map(b => <li>{b[lang]}</li>)}
                 </ul>
               )
@@ -279,6 +279,13 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     display: flex;
   }
 
+  .bullets {
+    margin: 10px 0;
+  }
+
+  .bullets li {
+    font-size: 15px;
+  }
   .experience-card h3 {
     margin: 0;
     font-size: 34px;
@@ -288,6 +295,10 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     font-size: 18px;
     font-weight: 300;
     font-style: italic;
+  }
+
+  .experience-card h5 {
+    margin: 5px 0;
   }
 
   .experience-header {

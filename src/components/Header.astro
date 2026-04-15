@@ -11,11 +11,13 @@ import Navbar from "./Navbar.astro";
 <style>
     header {
         width: 100%;
-        padding: 20px 80px;
+        padding: 20px;
+        padding-bottom: 0;
         background-repeat: repeat, no-repeat;
         background-size: auto, 100% 100%;
         color: var(--darkmode);
         min-height: 100px;
+        margin-bottom: 20px;
     }
 
     header > div {
@@ -36,7 +38,8 @@ import Navbar from "./Navbar.astro";
     /* Mobile devices */
     @media (max-width: 768px) {
         header {
-            padding: 10px 20px;
+            padding: 10px;
+            padding-bottom: 0;
         }
     }
 

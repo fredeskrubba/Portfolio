@@ -13,25 +13,25 @@ const t = lang === 'da' ? da : en;
 
 
 <section class="section-container">
-    <InfoBox /> 
+    <InfoBox class="reveal"/> 
     <section class="info-section">
-      <div class="intro vertical-carousel-item">
+      <div class="intro vertical-carousel-item reveal">
         <h1>{t['intro-title']}</h1>
         <article class="intro-box">
           <p>{t['intro-paragraph']}</p>
         </article>
       </div>
-      <div class="experience vertical-carousel-item ">
+      <div class="experience vertical-carousel-item reveal">
         
           <CarouselSection data={experience} />
         
       </div>
-      <div class="stack vertical-carousel-item">
+      <div class="stack vertical-carousel-item reveal">
         
           <CarouselSection data={stack} />
         
       </div>
-      <div class="projects vertical-carousel-item">
+      <div class="projects vertical-carousel-item reveal">
         
           <CarouselSection data={projects}/>
         
@@ -86,39 +86,13 @@ const t = lang === 'da' ? da : en;
   
 
   transform: translate(-50%, -50%) scale(0.8);
-  opacity: 0.5;
+  /* opacity: 0.5; */
   filter: blur(2px);
 
   transition: all 0.4s ease;
 
 }
 
-
-.vertical-carousel-item.active {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  filter: none;
-  z-index: 3;
-  border-radius: 15px;
-  background-color: color-mix(in srgb, var(--theme-bg), transparent 40%);
-  padding: 10px;
-}
-
-
-.vertical-carousel-item.prev {
-  transform: translate(-50%, calc(-50% - 180px)) scale(0.85);
-  opacity: 0.7;
-  z-index: 2;
-  pointer-events: none;
-}
-
-
-.vertical-carousel-item.next {
-  transform: translate(-50%, calc(-50% + 180px)) scale(0.85);
-  opacity: 0.7;
-  z-index: 2;
-  pointer-events: none;
-}
 
 
   .intro h1 {
@@ -149,7 +123,7 @@ const t = lang === 'da' ? da : en;
 .experience {
   z-index: 2;
   transform: translateY(-160px) scale(0.85) rotateX(15deg);
-  opacity: 0.7;
+  /* opacity: 0.7; */
   filter: blur(1px);
 }
 
@@ -157,50 +131,118 @@ const t = lang === 'da' ? da : en;
 .projects {
   z-index: 2;
   transform: translateY(160px) scale(0.85) rotateX(-15deg);
-  opacity: 0.7;
+  /* opacity: 0.7; */
   filter: blur(1px);
 }
 
-.vertical-carousel-item.hidden {
-  transform: translate(-50%, -50%) scale(0.7);
-  opacity: 0;
+@media (min-width: 1024px) {
+  .vertical-carousel-item.hidden {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .vertical-carousel-item.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  filter: none;
+  z-index: 3;
+  border-radius: 15px;
+  background-color: color-mix(in srgb, var(--theme-bg), transparent 40%);
+  padding: 10px;
+}
+
+
+.vertical-carousel-item.prev {
+  transform: translate(-50%, calc(-50% - 180px)) scale(0.85);
+  opacity: 0.7;
+  z-index: 2;
   pointer-events: none;
 }
 
-.dots {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding-right: 20px;
-  align-self: center;
+
+.vertical-carousel-item.next {
+  transform: translate(-50%, calc(-50% + 180px)) scale(0.85);
+  opacity: 0.7;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--theme-bg);
-  border: 1px solid var(--main-color);
-  opacity: 0.5;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.dot.active {
-  opacity: 1;
-  background-color: var(--main-color);
-}
-
-.dot:hover {
-  opacity: 0.8;
+  .dots {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+    align-self: center;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--theme-bg);
+    border: 1px solid var(--main-color);
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .dot.active {
+    opacity: 1;
+    background-color: var(--main-color);
+  }
+  
+  .dot:hover {
+    opacity: 0.8;
+  }
+  
 }
 </style>
 
+
+<style is:global> 
+  @media (max-width: 1024px) {
+    .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease;
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
+</style>
+ 
 <style>
 
 @media (max-width: 1024px) {
+
+      h1 {
+      text-shadow:
+      -1px -1px 0 var(--theme-bg),
+      0   -1px 0 var(--theme-bg),
+      1px -1px 0 var(--theme-bg),
+      1px  0   0 var(--theme-bg),
+      1px  1px 0 var(--theme-bg),
+      0    1px 0 var(--theme-bg),
+      -1px  1px 0 var(--theme-bg),
+      -1px  0   0 var(--theme-bg);
+    }
+    
+  .vertical-carousel-item.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease;
+  }
+
+  .vertical-carousel-item.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   .intro h1 {
     font-size: 60px;
@@ -285,64 +327,87 @@ const t = lang === 'da' ? da : en;
 
 
 <script>
-  const items = document.querySelectorAll(".vertical-carousel-item");
-  const dots = document.querySelectorAll(".dot");
+  const isDesktop = window.matchMedia("(min-width: 1024px)");
+  const scrollContainer = document.querySelector(".section-container");
 
-  let current = 0;
-  let isScrolling = false;
+  if (isDesktop.matches) {
+    const items = document.querySelectorAll(".vertical-carousel-item");
+    const dots = document.querySelectorAll(".dot");
 
-  function updateClasses() {
-    items.forEach((item, index) => {
-      item.classList.remove("active", "prev", "next", "hidden");
+    let current = 0;
+    let isScrolling = false;
 
-      if (index === current) {
-        item.classList.add("active");
-      } 
-      else if (index === current - 1) {
-        item.classList.add("prev");
-      } 
-      else if (index === current + 1) {
-        item.classList.add("next");
-      } 
-      else {
-        item.classList.add("hidden"); // 👈 important
-      }
-    });
-    updateDots();
-  }
+    function updateClasses() {
+      items.forEach((item, index) => {
+        item.classList.remove("active", "prev", "next", "hidden");
 
-  function updateDots() {
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("active", index === current);
-    });
-  }
+        if (index === current) {
+          item.classList.add("active");
+        } else if (index === current - 1) {
+          item.classList.add("prev");
+        } else if (index === current + 1) {
+          item.classList.add("next");
+        } else {
+          item.classList.add("hidden");
+        }
+      });
 
-  function handleScroll(e) {
-    if (isScrolling) return;
-
-    isScrolling = true;
-
-    if (e.deltaY > 0) {
-      current = Math.min(current + 1, items.length - 1);
-    } else {
-      current = Math.max(current - 1, 0);
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === current);
+      });
     }
 
-    updateClasses();
+    function handleScroll(e) {
+      if (isScrolling) return;
 
-    setTimeout(() => {
-      isScrolling = false;
-    }, 400);
+      isScrolling = true;
+
+      if (e.deltaY > 0) {
+        current = Math.min(current + 1, items.length - 1);
+      } else {
+        current = Math.max(current - 1, 0);
+      }
+
+      updateClasses();
+
+      setTimeout(() => {
+        isScrolling = false;
+      }, 400);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        current = index;
+        updateClasses();
+      });
+    });
+
+    window.addEventListener("wheel", handleScroll, { passive: true });
+
+    updateClasses();
   }
 
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      current = index;
-      updateClasses();
-    });
+  isDesktop.addEventListener("change", e => {
+    location.reload(); 
   });
 
-  window.addEventListener("wheel", handleScroll, { passive: true });
+  if (!isDesktop.matches) {
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".reveal");
 
-  updateClasses();
+    const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+}, {
+  threshold: 0.3, // must be 30% visible
+  rootMargin: "0px 0px -40% 0px", // delay trigger
+  root: scrollContainer || null // use scroll container if available;
+});
+
+    elements.forEach(el => observer.observe(el));
+  });
+}
 </script>

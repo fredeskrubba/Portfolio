@@ -461,19 +461,54 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
     opacity: 0;
     pointer-events: none;
   }
-</style>
 
+  @media (max-width: 1024px) {
+
+    .info-header h2 {
+      font-size: 30px;
+      text-shadow:
+      -1px -1px 0 var(--theme-bg),
+      0   -1px 0 var(--theme-bg),
+      1px -1px 0 var(--theme-bg),
+      1px  0   0 var(--theme-bg),
+      1px  1px 0 var(--theme-bg),
+      0    1px 0 var(--theme-bg),
+      -1px  1px 0 var(--theme-bg),
+      -1px  0   0 var(--theme-bg);
+    }
+
+  .info-header svg {
+    width: 35px;
+    height: 35px;
+    stroke: var(--theme-bg);
+    stroke-width: 1.5px;
+  }
+
+  }
+</style>
+  
 <style>
 
 @media (max-width: 768px) {
   
-
   .info-header h2 {
     font-size: 30px;
+    text-shadow:
+    -1px -1px 0 var(--theme-bg),
+     0   -1px 0 var(--theme-bg),
+     1px -1px 0 var(--theme-bg),
+     1px  0   0 var(--theme-bg),
+     1px  1px 0 var(--theme-bg),
+     0    1px 0 var(--theme-bg),
+    -1px  1px 0 var(--theme-bg),
+    -1px  0   0 var(--theme-bg);
   }
 
-  .experience-card {
-   
+  .info-header svg {
+    width: 35px;
+    height: 35px;
+    stroke: var(--theme-bg);
+    stroke-width: 1.5px;
   }
 
   .experience-card h3 {

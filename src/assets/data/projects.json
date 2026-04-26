@@ -6,7 +6,7 @@
             "en": "Skrubbanote is a note-taking app built with React and Tailwind, designed to provide users with a seamless and intuitive experience for organizing their thoughts and ideas on the go.",
             "da": "Skrubbanote er en note-app bygget med React og Tailwind, designet til at give brugerne en nem og intuitiv måde at organisere deres tanker og idéer på farten."
         },
-        "image": "/Skrubbanote.png",
+        "image": "images/Skrubbanote.png",
         "url": "https://www.skrubbanote.site",
         "stack": [
             {
@@ -30,5 +30,30 @@
                 "icon": "EntityFramework"
             }
             ]
-    }]
+    },
+    {
+        "title": "Snake",
+        "description": {
+            "en": "A simple snake game made to showcase vanilla JS skills, focusing on fundamentals and sound integration.",
+            "da": "Et simpelt snake spil lavet med vanilla Javascript for at vise fundamental JS og lyd integration"
+        },
+        "image": "images/snake.png",
+        "url": "https://snake.statichost.page/",
+        "stack": [
+            {
+                "name": "HTML",
+                "icon": "Html"
+            },
+            {
+                "name": "CSS",
+                "icon": "Css"
+            },
+            {
+                "name": "Javascript",
+                "icon": "Javascript"
+            }
+            ]
+    }
+
+]
 }

@@ -135,7 +135,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
           <a href={item.url} target="_blank" rel="noopener noreferrer">
             <div class="project-card card">
               <div style={`background-image: url(${item.image});`} class="project-image">
-                <img src={`${import.meta.env.BASE_URL}/${item.image}`} alt={item.title} />
+                <img src={`${import.meta.env.BASE_URL}${item.image}`} alt={item.title} />
               </div>
               <div class="project-info">
                 <div>

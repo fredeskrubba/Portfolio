@@ -30,28 +30,7 @@
                 "icon": "EntityFramework"
             }
             ]
-    },
-    {
-        "title": "Snake",
-        "description": {
-            "en": "A simple snake game made to showcase vanilla JS skills, focusing on fundamentals and sound integration.",
-            "da": "Et simpelt snake spil lavet med vanilla Javascript for at vise fundamental JS og lyd integration"
-        },
-        "image": "images/snake.png",
-        "url": "https://snake.statichost.page/",
-        "stack": [
-            {
-                "name": "HTML",
-                "icon": "Html"
-            },
-            {
-                "name": "CSS",
-                "icon": "Css"
-            },
-            {
-                "name": "Javascript",
-                "icon": "Javascript"
-            }
+    }
             ]
     }
 

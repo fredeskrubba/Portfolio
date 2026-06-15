@@ -122,9 +122,7 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
             {isStack(item) && (
               <div class="stack-page card">
                 {item.page1.map(s => {
-                  console.log(item);
                   const IconComp = Icons[s.icon];
-                  console.log(IconComp);
                   return IconComp ? <span data-tooltip={s.name}><IconComp class="tech-stack-icon"/></span> : null;
                 })}
               </div>

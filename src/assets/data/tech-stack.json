@@ -6,14 +6,17 @@
 
             {
               "name": "HTML",
-              "icon": "Html"
+              "icon": "Html",
+              "stack": "Frontend"
             },
             {
               "name": "CSS",
-              "icon": "Css"
+              "icon": "Css",
+              "stack": "Frontend"
             },
             {
               "name": "Javascript",
+<<<<<<< HEAD
               "icon": "Javascript"
             },
             {
@@ -39,46 +42,90 @@
             {
               "name": "C#",
               "icon": "CSharp"
+=======
+              "icon": "Javascript",
+              "stack": "Frontend"
+            },
+            {
+              "name": "Angular",
+              "icon": "Angular",
+              "stack": "Frontend"
+>>>>>>> 0871390 (stack ui update)
             },
             {
               "name": "Blazor",
-              "icon": "Blazor"
+              "icon": "Blazor",
+              "stack": "Frontend"
+            },
+            {
+              "name": "React",
+              "icon": "React",
+              "stack": "Frontend"
+            },
+            {
+              "name": "Redux",
+              "icon": "Redux",
+              "stack": "Frontend"
+            },
+            {
+              "name": "Tailwind",
+              "icon": "Tailwind",
+              "stack": "Frontend"
+            },
+            {
+              "name": "Astro.js",
+              "icon": "Astro",
+              "stack": "Frontend"
+            },
+            {
+              "name": "C#",
+              "icon": "CSharp",
+              "stack": "Backend"
             },
             {
               "name": ".NET",
-              "icon": "Net"
+              "icon": "Net",
+              "stack": "Backend"
             },
             {
               "name": "Entity Framework",
-              "icon": "EntityFramework"
+              "icon": "EntityFramework",
+              "stack": "Backend"
             },
             {
               "name": "MySQL",
-              "icon": "MySql"
+              "icon": "MySql",
+              "stack": "Databases"
             },
             {
               "name": "PostgreSQL",
-              "icon": "Postgres"
+              "icon": "Postgres",
+              "stack": "Databases"
             },
             {
               "name": "Microsoft SQL Server",
-              "icon": "SqlServer"
+              "icon": "SqlServer",
+              "stack": "Databases"
             },
             {
               "name": "Git",
-              "icon": "Git"
+              "icon": "Git",
+              "stack": "Tools"
             },
             {
               "name": "Docker",
-              "icon": "Docker"
+              "icon": "Docker",
+              "stack": "Tools"
             },
             {
               "name": "Azure DevOps",
-              "icon": "AzureDevops"
+              "icon": "AzureDevops",
+              "stack": "Tools"
             },
             {
               "name": "Figma",
-              "icon": "Figma"
+              "icon": "Figma",
+              "stack": "Tools"
             }
         ]
     }

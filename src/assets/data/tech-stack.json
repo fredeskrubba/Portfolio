@@ -15,44 +15,6 @@
               "stack": "Frontend"
             },
             {
-              "name": "Javascript",
-<<<<<<< HEAD
-              "icon": "Javascript"
-            },
-            {
-              "name": "Angular",
-              "icon": "Angular"
-            },
-            {
-              "name": "React",
-              "icon": "React"
-            },
-            {
-              "name": "Redux",
-              "icon": "Redux"
-            },
-            {
-              "name": "Tailwind",
-              "icon": "Tailwind"
-            },
-            {
-              "name": "Astro.js",
-              "icon": "Astro"
-            },
-            {
-              "name": "C#",
-              "icon": "CSharp"
-=======
-              "icon": "Javascript",
-              "stack": "Frontend"
-            },
-            {
-              "name": "Angular",
-              "icon": "Angular",
-              "stack": "Frontend"
->>>>>>> 0871390 (stack ui update)
-            },
-            {
               "name": "Blazor",
               "icon": "Blazor",
               "stack": "Frontend"

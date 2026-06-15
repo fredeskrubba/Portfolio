@@ -34,7 +34,6 @@ const lang = Astro.url.pathname.startsWith('/da') ? 'da' : 'en';
 const t = lang === 'da' ? da : en;
 const { data } = Astro.props;
 
-
 const isExperience = (item: any): item is Experience => 'position' in item;
 const isProject = (item: any): item is Project => 'url' in item;
 const isStack = (item: any): item is StackItem => !('position' in item) && !('url' in item);
@@ -123,7 +122,9 @@ const Icon = isExperience(firstItem) ? ExperienceIcon : isProject(firstItem) ? P
             {isStack(item) && (
               <div class="stack-page card">
                 {item.page1.map(s => {
+                  console.log(item);
                   const IconComp = Icons[s.icon];
+                  console.log(IconComp);
                   return IconComp ? <span data-tooltip={s.name}><IconComp class="tech-stack-icon"/></span> : null;
                 })}
               </div>

@@ -18,7 +18,6 @@ import LinkedinIcon from '../icons/linkedin-icon.svg';
 import MailIcon from '../icons/mail-icon.svg';
 import MySql from '../icons/MySQL.svg';
 import Net from '../icons/net.svg';
-import Nodejs from '../icons/Nodejs.svg';
 import Postgres from '../icons/Postgres.svg';
 import ProjectsIcon from '../icons/projects-icon.svg';
 import React from '../icons/React.svg';
@@ -27,9 +26,9 @@ import Redux from '../icons/Redux.svg';
 import SqlServer from '../icons/sql-server.svg';
 import StackIcon from '../icons/stack-icon.svg';
 import Tailwind from '../icons/Tailwind.svg';
-import Nextjs from '../icons/nextjs.svg';
 import Astro from '../icons/Astro.svg';
 import DanishLanguage from '../icons/Danish-language.svg';
+import Angular from '../icons/Angular.svg';
 
 export {
   Arrow,
@@ -53,7 +52,6 @@ export {
   MailIcon,
   MySql,
   Net,
-  Nodejs,
   Postgres,
   ProjectsIcon,
   React,
@@ -62,6 +60,6 @@ export {
   SqlServer,
   StackIcon,
   Tailwind,
-  Nextjs,
-  Astro
+  Astro,
+  Angular
 };

@@ -17,16 +17,16 @@
               "icon": "Javascript"
             },
             {
+              "name": "Angular",
+              "icon": "Angular"
+            },
+            {
               "name": "React",
               "icon": "React"
             },
             {
               "name": "Redux",
               "icon": "Redux"
-            },
-            {
-              "name": "Angular",
-              "icon": "Angular"
             },
             {
               "name": "Tailwind",

@@ -25,6 +25,10 @@
               "icon": "Redux"
             },
             {
+              "name": "Angular",
+              "icon": "Angular"
+            },
+            {
               "name": "Tailwind",
               "icon": "Tailwind"
             },

@@ -29,6 +29,7 @@ import Tailwind from '../icons/Tailwind.svg';
 import Astro from '../icons/Astro.svg';
 import DanishLanguage from '../icons/Danish-language.svg';
 import Angular from '../icons/Angular.svg';
+import Typescript from '../icons/Typescript.svg';
 
 export {
   Arrow,
@@ -61,5 +62,6 @@ export {
   StackIcon,
   Tailwind,
   Astro,
-  Angular
+  Angular,
+  Typescript
 };

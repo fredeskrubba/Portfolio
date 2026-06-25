@@ -15,6 +15,21 @@
               "stack": "Frontend"
             },
             {
+              "name": "Javascript",
+              "icon": "Javascript",
+              "stack": "Frontend"
+            },
+            {
+              "name": "Typescript",
+              "icon": "Typescript",
+              "stack": "Frontend"
+            },
+            {
+              "name": "Angular",
+              "icon": "Angular",
+              "stack": "Frontend"
+            },
+            {
               "name": "Blazor",
               "icon": "Blazor",
               "stack": "Frontend"
@@ -72,22 +87,22 @@
             {
               "name": "Git",
               "icon": "Git",
-              "stack": "Tools"
+              "stack": "Other tools"
             },
             {
               "name": "Docker",
               "icon": "Docker",
-              "stack": "Tools"
+              "stack": "Other tools"
             },
             {
               "name": "Azure DevOps",
               "icon": "AzureDevops",
-              "stack": "Tools"
+              "stack": "Other tools"
             },
             {
               "name": "Figma",
               "icon": "Figma",
-              "stack": "Tools"
+              "stack": "Other tools"
             }
         ]
     }

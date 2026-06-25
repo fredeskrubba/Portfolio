@@ -38,7 +38,7 @@
             "da": "Skrubba Flick er en film-watchlist applikation, der giver brugerne mulighed for at opdage, organisere og holde styr på film, de ønsker at se. Projektet er udviklet i Angular og TypeScript og benytter eksterne API'er til at levere opdaterede filmdata. Fokus har været på moderne frontend-udvikling, responsivt design og effektiv håndtering af applikationens tilstand."
         },
         "image": "images/Skrubbaflick.png",
-        "url": "https://www.skrubbaflick.site",
+        "url": "https://www.skrubbaflick.statichost.site",
         "stack": [
             {
                 "name": "HTML",

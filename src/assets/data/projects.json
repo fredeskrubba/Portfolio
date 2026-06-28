@@ -34,8 +34,8 @@
     {
         "title": "Skrubbaflick",
         "description": {
-            "en": "Skrubba Flick is a movie watchlist application that allows users to discover, organize, and track movies they want to watch. Built with Angular and TypeScript, the project integrates external APIs to deliver real-time movie data while showcasing modern frontend development practices, responsive design, and state management.",
-            "da": "Skrubba Flick er en film-watchlist applikation, der giver brugerne mulighed for at opdage, organisere og holde styr på film, de ønsker at se. Projektet er udviklet i Angular og TypeScript og benytter eksterne API'er til at levere opdaterede filmdata. Fokus har været på moderne frontend-udvikling, responsivt design og effektiv håndtering af applikationens tilstand."
+            "en": "Skrubba Flick is a movie watchlist application that allows users to discover, organize, and track movies they want to watch. Built with Angular and TypeScript, the project integrates external APIs to deliver real-time movie data while showcasing modern frontend development practices, responsive design, and state management. The data is saved using localstorage, due to it being a frontend only project. Because of this, no data is sent forwards to me.",
+            "da": "Skrubba Flick er en film-watchlist applikation, der giver brugerne mulighed for at opdage, organisere og holde styr på film, de ønsker at se. Projektet er udviklet i Angular og TypeScript og benytter eksterne API'er til at levere opdaterede filmdata. Fokus har været på moderne frontend-udvikling, responsivt design og effektiv håndtering af applikationens state. Dataen i appen gemmes i localstorage, på grund af mit ønske om et projekt bygget udelukkende med frontendteknologier. Data sendes derfor heller ikke videre til mig."
         },
         "image": "images/Skrubbaflick.png",
         "url": "https://skrubbaflick.statichost.page/", 
